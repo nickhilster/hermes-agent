@@ -93,3 +93,29 @@ installed system-wide, evidence files present).
   user's own context is the prize.** The KinOS safety architecture
   (`08`) is sized accordingly: the walls that matter are around data
   and authority at user level, not around sudo.
+
+## Project infrastructure (2026-11-17 evening)
+
+- **Tracker is live in this repo.** Teambotics Init run in APPLY mode:
+  TrackerBuddy scaffolded under `.tracker/` (config productName
+  "Kin-Hermes", ID prefix **KH**, accent `#3847FF`), `doctor` passing,
+  seeded with KH-1…KH-13 from the work discussed on 2026-11-17 (state
+  sheet, pet replacement, onboarding M1, desk presence, KinOS Mode,
+  ceiling follow-ups, Whisper gaps, the fork-backup decision, legion-win
+  token/version, parked companion, experiment battery, father dogfood).
+  Board: `.tracker/board.html`. Note: the npm `adopt` step (declaring
+  trackerbuddy as a devDependency) was not run — this docs repo follows
+  the same pattern as the Teambotics front-door repo, which carries
+  `.tracker/` without a package.json; the CLI runs from the trackerbuddy
+  repo copy. Revisit if the fork repo adopts it with the dependency.
+- **Internal repos installed** (working copies under Muse's
+  `~/workspace/repos/<owner>/<repo>/`, per house convention):
+  `nickhilster/Teambotics` (init + company OS), `nickhilster/trackerbuddy`
+  (tracker tooling), `nickhilster/hangar` (portfolio router),
+  `Teambotics-Inc/hermes-agent` (the fork — implementation target),
+  `nickhilster/openpets` and `Teambotics-OSS/deskbuddy` (pet/desk
+  prior art), `nickhilster/kin-ubuntu` (KinOS prototype reference).
+  **Not found in the estate:** the boardy-at-the-desk *source* repo —
+  only its releases repo (Teambotics-BackBurner) is on GitHub;
+  `nickhilster/boardy108` is the Boardy stills project, not the desk
+  app. The desk source's location is an open question for Nik.
