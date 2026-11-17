@@ -20,8 +20,8 @@ project's *intent*. Read `README.md` first, then the `docs/` in numbered order.
 - **Competitor products are never named to a Hermes instance under test.** Tasks are
   pitched against features, never brands.
 - **No push without Nik's word.** A git push can be a spending decision (deploy
-  triggers). This docs repo is the standing exception only when Nik explicitly says
-  "seed/update the repo".
+  triggers). This repo is the standing exception: **Nik's standing rule
+  (2026-11-17) — any artefact created for Hermes is pushed to this repo.**
 - **Nothing in the experiment gets patched mid-course.** Deviations are logged in
   the deviation log, never silently fixed (see `docs/06-the-experiment.md`).
 - **hermes-zenbook's blank slate is an asset.** Do not seed it with another
