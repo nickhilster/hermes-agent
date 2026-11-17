@@ -92,3 +92,13 @@ father" *without giving up the power* — the power just goes under the floor,
 automatic (`08`), with receipts (`07`). That answer is the PM application in
 one line, and it is the fork's acceptance test for every feature: **could
 Nik's father use this, unaided, on his phone?**
+
+## Internal only — the India window (Nik, 2026-11-17; NOT for the pitch)
+
+Meta/Muse is aiming at the same demographic — the father. The one current
+gap: **Muse is not available in India right now.** Nik is explicit that this
+does **not** go in the product pitch. It matters elsewhere — notably for
+Instinct, whose bet is WhatsApp (where the father demographic already lives)
+rather than the desktop. Hermes started in the desktop game; KinOS *is* the
+desktop game; that is why this role and this product matter. Recorded here so
+the strategy never mistakes a temporary availability gap for a moat.
