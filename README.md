@@ -39,6 +39,9 @@ pet sprites, but no *person*. Step one is the persona.
    rules, baseline results, deviations
 8. `docs/07-working-rules-and-provenance.md` — how we work: receipts over
    reassurance, corrections beside errors, the Cost-Control Gate
+9. `docs/08-kinos-mode.md` — the flagship: a mode inside Hermes that takes over
+   the OS shell (taskbar hides, the character is the surface), Muse as the
+   benchmark, safety architecture as part of the feature, Whisper fleet tracking
 
 `AGENTS.md` in this repo root is the briefing for any Hermes instance (or any other
 agent) picking this project up cold.
