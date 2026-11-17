@@ -123,3 +123,23 @@ Known refinement for v2 (concept art is a sketch, not the mark): the wings
 in v1 drift floral/pinwheel in some states — they should sit tighter and
 higher, winged-helm style, smaller than the head; the lower "petal" reading
 must go.
+
+## Concept v2 — the face (Nik's direction, 2026-11-17; art: `assets/hermes-character-concept-v2.webp`)
+
+Nik's correction to v1: a glyph alone is a logo; **the character needs
+eyes and lips** — that is what personifies him. V2 keeps the three-shape
+body (circle / staff / wings) and adds the minimal face:
+
+- **Two eyes** — small ovals or dots. Grammar: open ovals = alert; narrowed
+  slashes = effort/running; dots = attention/review; closed curves =
+  failed or resting; upward arcs = contentment.
+- **Lips** — one small mouth line. Grammar: flat = neutral/dry; tiny curve
+  = pleased; small downturn = failed, stated plainly without drama.
+
+The face is deliberately the *only* human layer. No nose, no hair, no body,
+no costume — personification by the smallest possible dose, so he stays a
+mark at 16px and becomes a someone at conversation size. The warmth this
+adds is the point (Nik's call): the wings and staff keep the dignity, the
+eyes and lips carry the relationship. States in v2 art, left to right:
+alert · running (determined) · review (attentive, one wing raised) · failed
+(drooped, eyes closed, small frown) · waiting (content arcs).
