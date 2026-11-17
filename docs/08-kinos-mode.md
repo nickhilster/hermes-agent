@@ -109,3 +109,24 @@ The welcome-token onboarding (`03`) is the right instinct — it matches what
 Nik had already designed for KinOS — and it should be scaled like it
 matters, because the window where an independent agent can still win the
 relationship layer is open now and will not stay open. We need to run.
+
+## The computer is not a chair — it is the home server (Nik, 2026-11-17)
+
+A correction that completes this document, made by Nik in response to the
+lead's strongest counter-argument ("the father doesn't live on a desktop"):
+
+**KinOS does not ask anyone to sit at a computer.** It asks for exactly one
+thing: *leave your computer on.* The laptop/desktop at home is **infrastructure**
+— an always-on home server, like Nik's xps-plex, a machine nobody has opened
+in ages that still serves the whole house. The father figures out how much he
+can get done; the work happens on the home machine; the approval arrives on
+his **phone**; he comes back, opens the laptop, and the scanned PDF he wanted
+is *ready*. The laptop does not even need to be open for any of it.
+
+And this is the sovereignty pitch, stated as Nik states it: Muse's agent
+runs on a Linux VM **at Meta** — Meta is your server, and your data lives at a
+billion-dollar company whose business is selling it. What Hermes and KinOS
+sell instead: **your data stays with you, because your laptop at home is your
+server** — and from that server, the agent reaches the rest of the home,
+smart-home devices included. Same capability shape as the platform product;
+opposite custody. That is not a feature difference. It is the whole point.
