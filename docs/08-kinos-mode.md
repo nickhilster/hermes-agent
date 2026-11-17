@@ -79,3 +79,33 @@ Hermes supports STT providers `local (faster-whisper) | groq | openai |
 mistral`, and ships a whisper.cpp transcription tool in-repo — the plumbing
 exists; the fleet job is making dictation actually work on all three, then
 proving it with a spoken test on each.
+
+## Automatic, not coder (Nik, 2026-11-17)
+
+A defining rule of the mode, and of the fork generally: **the user never
+operates the machinery.** Hermes already lets you switch models; in KinOS
+Mode the model routing stays automatic and invisible — the human should not
+know or care which model answered, any more than they know which cell tower
+carried a call. No model pickers, no provider knobs, no coder's console
+wearing a friendlier skin. The simplest possible experience, from onboarding
+onward: say what you want, it gets done. There is so much more to automate
+than the current generation of agents automates — that gap is the product
+opportunity.
+
+One refinement, from this project's own provenance doctrine (`07`):
+**automatic in the moment, accountable in the record.** Invisible while it
+happens; inspectable afterwards. The human never *has* to look — but the
+receipts (which model, which tools, what it touched) always exist and are
+always theirs to open. Automation without receipts is how an agent becomes
+unaccountable; receipts without automation is how it becomes an office tool.
+
+## The urgency (Nik, 2026-11-17)
+
+The competitive clock is real: Meta is giving Muse away at a scale no
+startup matches out of pocket (Nik's framing: "100 million tokens a week —
+what are we doing?"). Nous has raised serious funding; **funding that sits
+still while a platform company gives the product away is funding wasted.**
+The welcome-token onboarding (`03`) is the right instinct — it matches what
+Nik had already designed for KinOS — and it should be scaled like it
+matters, because the window where an independent agent can still win the
+relationship layer is open now and will not stay open. We need to run.
