@@ -41,3 +41,19 @@ Every claim in these documents was checked against a live source at seed time
 (machine state read over SSH, the Hermes codebase read in the fork clone, Nous's
 public pages fetched). Where a fact ages — versions, session counts, build
 status — the docs say when it was true. See `07` for the working rules.
+
+## Hard rule: adults only (Nik, standing KinOS rule, restated 2026-11-17)
+
+**No kids. No kids mode, no kid training, no teen tier, no parental-consent
+path.** KinOS — and therefore this fork's KinOS Mode — is designed for
+adults, full stop. This is not a compliance posture adopted under pressure;
+it predates the pressure. It is also, as of checking on 2026-11-17, exactly
+where the market leader landed: Muse is 18+ only, with no supervised teen
+mode, and its sign-up card requirement doubles as age verification (a card
+in your own name, a small refundable authorization). Character.AI is the
+counter-example that shows the cost of the opposite choice (`01`). An
+agent with real authority over a person's machine, money and messages is
+an adult tool, the way a car or a bank account is an adult tool — and the
+design freedom that buys (no engagement-maxxing on the vulnerable, no
+attachment engineering aimed at the young) is a feature of this project,
+not a limitation.
