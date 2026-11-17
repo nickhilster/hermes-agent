@@ -143,3 +143,25 @@ adds is the point (Nik's call): the wings and staff keep the dignity, the
 eyes and lips carry the relationship. States in v2 art, left to right:
 alert · running (determined) · review (attentive, one wing raised) · failed
 (drooped, eyes closed, small frown) · waiting (content arcs).
+
+## Concept v4 — brows complete the face (Nik, 2026-11-17; art: `assets/hermes-character-concept-v4.webp`)
+
+Nik tested the one-eye variant direction and settled it by eye: **the
+two-eyes version wins.** (A one-eye + brow + lips sketch exists in assets
+as `hermes-character-concept-v3-one-eye.webp`, kept for the record, not the
+direction.) His other ruling stands and completes the face: **eyebrows are
+really important** — the whole emoji system, and South Park's entire
+emotional range, run on eyes + lips + brows. The face grammar is therefore
+three elements, and the brow does the heaviest lifting:
+
+| Element | Grammar |
+|---|---|
+| Brows | level = calm/alert · angled down-in = determination/effort · raised = curiosity, review, an approval ask · slanted up-in = sadness, apology (failed) · soft arcs = contentment |
+| Eyes | ovals = alert · narrowed = effort · dots = attention · closed curves = failed/resting · upward arcs = pleased |
+| Lips | flat = dry/neutral · pressed = effort · tiny curve = pleased · downturn = failure stated plainly · gentle smile = ready/waiting |
+
+The animation consequence (Nik's point): lips earn their place *in
+motion* — a mouth that opens, presses, and settles is what makes a state
+change read as a feeling instead of an icon swap. The state sheet
+milestone must spec brow/eye/lip keyframes per state, not just wing and
+staff poses.
