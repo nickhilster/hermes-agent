@@ -130,3 +130,36 @@ sell instead: **your data stays with you, because your laptop at home is your
 server** — and from that server, the agent reaches the rest of the home,
 smart-home devices included. Same capability shape as the platform product;
 opposite custody. That is not a feature difference. It is the whole point.
+
+## The Ready Surface — where finished work lands (Nik, 2026-11-17)
+
+The mode's UI, specified by a real morning: Nik's father needed a PDF
+resized and had to *call someone* to get it done. (Days earlier, the same
+shape: his father's painting images, edited and sent back for an online
+exhibition.) Every one of those tasks is an agent task. The only missing
+piece is the asking and the landing:
+
+- **The asking happens on the phone.** A message, a photo of the document,
+  a voice note — from wherever he is.
+- **Hermes runs in the background** on the home machine and does the work.
+- **The landing is a UI that sits on the desktop** — not the file buried in
+  a folder he must hunt for, and not the raw desktop either: a dedicated
+  surface, a small Hermes window on the desktop, inside which *whatever is
+  new and ready for him is simply there*. The resized PDF. The edited
+  images. The thing he asked for, finished, waiting at eye level.
+
+That surface is the father's whole interface with the system. He never opens
+a file manager, never learns a folder structure, never sits down to "use the
+computer" — he glances at the desktop and the work of his day is present,
+the way a physical desk holds what the morning brought.
+
+Scope honesty, in Nik's own framing: his father *has* a desktop; not
+everyone does, and that's okay. The home-server thesis (`08` above) serves
+households that have a machine to leave on; the phone face serves everyone
+else, and the two compose — the approval and the asking are already
+phone-shaped.
+
+And the build note that closes the loop: **Hermes itself will build this
+surface.** The fork's managers (the three Hermes instances, `AGENTS.md`)
+build the window their own product is missing, under the lead's briefs and
+the director's eye — the project eating its own cooking from day one.
