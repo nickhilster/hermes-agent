@@ -87,3 +87,39 @@ line art given the state/voice treatment (`02` above), the Nous Girl lineage
 kept as the house style rather than a competing face. The mythology is the
 permission: they already chose a god with a personality. We just let him be
 one.
+
+## Concept v1 — "The Glyph" (Muse's proposal, 2026-11-17; concept art: `assets/hermes-character-concept-v1.webp`)
+
+Nik's brief: simple shapes; not cute like Jolly; not corporate like a desk
+mascot; simple design. The proposal: **don't design a creature — promote
+their own caduceus to a character.** Hermes's CLI banner already carries a
+caduceus hero mark. Reduced to primitives, it is a living glyph:
+
+- **A circle** — the head. One eye, drawn as a single line or dot; the eye
+  is the entire face. Expression = what the line does (flat = calm, dot =
+  attention, arc = contentment, gone = asleep/failed-quiet).
+- **A vertical line** — the staff, ending in a small circle. The staff's
+  tilt is the body language: upright = ready, leaning = moving, slumped =
+  failed.
+- **Two wing arcs** — the winged helm, and the main actors. Wings carry the
+  emotional register: spread = alert/welcome, swept back = running, one
+  raised = wave/approval-ask, drooped = failed or sad, slow-open = waiting.
+
+**States map 1:1 onto the existing Petdex activity vocabulary**
+(`idle / run / review / wave / jump / failed / waiting`) — so the character
+plugs into the state plumbing Hermes already ships, but as a first-party
+Hermes instead of a borrowed gallery sprite. In the Boardy-at-the-Desk
+architecture (`theme.json`: states → assets + geometry), each state is a
+wing/staff/eye configuration — a handful of SVG primitives, animatable with
+darts and glides (a messenger moves in straight lines; he never bounces).
+
+Register: dry, quick, unbothered. Electric blue `#3847FF` line on black, or
+B/W with the blue as accent — Nous's own palette. He reads at 16px as a
+favicon and at full-screen as the Ready Surface's host (`08`). He is not a
+pet you adopt; he is the colleague who was always in the machine — the god,
+on duty, in three shapes.
+
+Known refinement for v2 (concept art is a sketch, not the mark): the wings
+in v1 drift floral/pinwheel in some states — they should sit tighter and
+higher, winged-helm style, smaller than the head; the lower "petal" reading
+must go.
