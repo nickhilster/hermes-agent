@@ -102,3 +102,28 @@ Instinct, whose bet is WhatsApp (where the father demographic already lives)
 rather than the desktop. Hermes started in the desktop game; KinOS *is* the
 desktop game; that is why this role and this product matter. Recorded here so
 the strategy never mistakes a temporary availability gap for a moat.
+
+## Internal — how Meta actually makes money, and the crack in it (Nik, 2026-11-17)
+
+Meta gives Muse's tokens away because the agent is not the product being
+sold. The monetization, as Nik reads it (and as Zuckerberg has described
+publicly in shape): **transaction tolls** — commissions on shopping and
+commerce flowing through the agent; the metaverse play rebuilt in the
+agentic verse, with Meta as the toll booth.
+
+The crack, in Nik's analysis: the toll only exists if the merchant lets it.
+Repetitive buying (the Walmart grocery run) is exactly the commerce a
+merchant can automate *themselves* — Walmart will ship its own bot and keep
+its own customer. And for everything else, people mostly *want* to shop;
+browsing is leisure, not friction. A toll booth on a road the road-owners
+can rebuild for free is not a business — it is a temporary gap.
+
+The deeper distinction, and the one this project is built on: **whose agent
+is it?** Meta's agent, however delightful, ultimately serves the toll — its
+loyalty runs to the marketplace. The Hermes/KinOS agent runs on the user's
+own server, with the user's data in the user's house (`08`), and its loyalty
+has exactly one address. Also worth recording: the way Nik uses Muse —
+fleet operations over SSH, a working lead with memory and tools — is *not*
+what Meta is developing or monetizing Muse for. The capability exists; the
+product intent doesn't. Serious infrastructure-grade personal agency is
+unclaimed product territory, and it is the territory Hermes already lives in.
