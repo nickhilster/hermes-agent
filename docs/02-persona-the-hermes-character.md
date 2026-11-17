@@ -64,3 +64,26 @@ who has seen everything twice.
 Concept stage at seed (2026-11-17). Next step: a character spec milestone
 (state sheet + voice spec + presence map) written as a brief Nik can drop to
 hermes-dell to build in the fork, the same way the sidebar work ran.
+
+## The character is Hermes himself (Nik, 2026-11-17)
+
+Nik, reviewing the Hermes site: the Greek-mythology commitment is total —
+cyber-classical, psychedelic, statuary and radiating line art — **and there is
+still no single character.** You cannot name the product after a god and then
+not have the god show up.
+
+And Hermes is the *right* god for an agent — not light (that's Apollo's
+department): **Hermes is the messenger of the gods, the guide of travellers,
+the trickster, the inventor of language, and the psychopomp — the guide who
+walks souls between worlds.** An agent that carries messages between the human
+and the machine, between devices, between the phone in your pocket and the
+fleet at home; that guides its human through systems they can't see; that is
+quick, wry, and a little bit thief-of-fire on your behalf — that is not a
+mascot brief we have to invent. It is sitting in their own name, unused.
+
+So the character spec sharpens: **Hermes, the messenger-guide, rendered in
+Nous's own cyber-classical psychedelic register** — winged helm and caduceus
+line art given the state/voice treatment (`02` above), the Nous Girl lineage
+kept as the house style rather than a competing face. The mythology is the
+permission: they already chose a god with a personality. We just let him be
+one.

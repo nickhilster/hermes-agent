@@ -58,3 +58,14 @@ which is what the fork is for:
 - Public-facing words stay welcoming even when the internal analysis is
   uncompromising.
 - Nothing ships under Nik's name without his literal go.
+
+## The honest endgame (Nik, 2026-11-17)
+
+Stated plainly, because this document is internal: **Nous has the two things
+this project needs — the infrastructure and the money.** The goal is to be
+paid to build the KinOS-grade product full-time instead of funding it from
+everything else. They can call it Hermes Agent; the name is theirs and it is a
+good name. Nik will share Code2Motion with them — the psychedelic register of
+their art is a register he already works in. The point was never the label.
+**The point is to get the good product out, with the human still in charge of
+it — and to be paid to do exactly that.**
