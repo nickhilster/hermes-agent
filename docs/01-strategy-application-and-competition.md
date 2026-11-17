@@ -69,3 +69,26 @@ good name. Nik will share Code2Motion with them — the psychedelic register of
 their art is a register he already works in. The point was never the label.
 **The point is to get the good product out, with the human still in charge of
 it — and to be paid to do exactly that.**
+
+## The question (Nik, 2026-11-17)
+
+Every product decision in this project reduces to one question:
+
+> **Does Hermes Agent mean to be a product for people like Nikhil — or for
+> people like Nikhil's father?**
+
+Today, Hermes answers "Nikhil": terminal installs, model switching, config
+files, a CLI-crowd UI. That is a real market and a small one. Nik's father is
+the KinOS target demographic, and the rule behind him is universal: **if his
+father can use it, every other demographic can too** — as long as they have a
+phone and a computer. Designing for the father is not dumbing the product
+down; it is the curb-cut: the power user loses nothing when the machinery
+disappears (he was never attached to the machinery — he was attached to what
+it *did*), and everyone else gains the product entirely.
+
+Muse is winning because, whatever its other properties, it answers closer to
+"the father" than any agent built for the CLI crowd. Hermes can answer "the
+father" *without giving up the power* — the power just goes under the floor,
+automatic (`08`), with receipts (`07`). That answer is the PM application in
+one line, and it is the fork's acceptance test for every feature: **could
+Nik's father use this, unaided, on his phone?**
