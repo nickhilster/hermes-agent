@@ -1,0 +1,160 @@
+Query: # Graveyard brief KH-12-prep — Phase 0 config diff, DRAFT ONLY 
+(hermes-dell, dell-nik)
+
+Overnight drafting run, directed by Nik through Muse (2026-11-17).
+DRAFT ONLY: apply NO configuration changes. Do not restart the
+gateway or any service. Read-only inspection of your own live config
+is expected; changing it is forbidden in this run.
+
+Context: the Nous experiment plan (v0.2, locked) calls for a
+"Phase 0 KinOS-posture" configuration of this instance before the
+T1–T7 task battery. The posture principles live in the project repo
+nickhilster/hermes-agent — read docs/00-charter.md, docs/06-the-
+experiment.md and docs/08-kinos-mode.md (clone read-only if needed).
+Known already-applied facts: Nik raised the memory budgets x10 on
+2026-11-17 after the baseline probe hit the 2,200-char native cap.
+
+Task: produce a proposed Phase 0 diff for THIS instance
+(hermes-dell on dell-nik): for each relevant setting — memory
+budgets and posture, approval/confirmation behaviour, tool surface,
+STT, gateway/messaging posture, anything the charter implies —
+give: current value (observed from the live config, with the file
+and key), proposed value, rationale tied to a charter/doc line, and
+risk if applied. Where you cannot observe a current value, say so;
+do not guess. Flag any proposed change that would alter the
+lived-in character of this instance, since that history is evidence
+for the experiment and must not be destroyed casually.
+
+Deliverable: ~/graveyard-2026-11-17/KH-12-phase0-diff.md on this
+machine + a 5-line summary in your final message stating clearly
+that nothing was applied.
+
+📚 Skill hermes-agent
+📚 Skill hermes-agent → references/configuration.md
+💻 $ pwd + 6 commands  0.2s
+🐍 Exec from hermes_tools import web_search  0.3s
+💻 $ printf '%s\n' 'config metadata' + 3 commands  0.2s
+💻 $ printf 'repo locations\n' + 6 commands  0.8s
+✗ Read 00-charter.md  0.3s [File not found: 00-charter.md]
+✗ Read 06-the-experiment.md  0.3s [File not found: 06-the-experiment.md]
+✗ Read 08-kinos-mode.md  0.3s [error]
+🔎 Grep (?i)^\s*(memory:|approvals:|stt:|gateway:|platforms:|tools:|toolsets:|agent:|compression:|context_engine:|skills:|voice:|telegram:|discord:|a2a:|enabled:|provider:|mode:|write_approval:|memory_enabled:|user_profile_enabled:|approval_timeout:|timeout:|max_chars|max_chars_per|budget|user_profile|memory.*budget)  0.3s
+💻 $ git -C /home/nikhil/dev/hermes-agent status --short --branch + 2 commands  0.1s
+🔎 Find 00-charter.md  0.5s
+💻 $ git ls-remote https://github.com/nickhilster/hermes-agent.git HEAD + 2 commands  1.1s
+📖 Read config.yaml L630-679
+📖 Read config.yaml L965-1144
+📖 Read config.yaml L1325-1474
+📖 Read config.yaml L1688-1742
+🔎 Find 00-charter\.md|06-the-experiment\.md|08-kinos-mode\.md  0.4s
+✗ $ python -c 'import urllib.request; u="https://api.github.com/repos/nickhilster/hermes-agent/contents/docs"; print(urllib.request.urlopen(u,timeout=15).read().decode()[:20000])'  0.6s [exit 1]
+🐍 Exec from hermes_tools import web_search  5.7s
+💻 $ git ls-remote --heads https://github.com/nickhilster/hermes-agent.git  1.0s
+💻 $ git -C /home/nikhil/dev/hermes-agent fetch --no-write-fetch-head https://github.com/nickhilster/hermes-agent.git main  9.2s
+💻 $ git -C /home/nikhil/dev/hermes-agent ls-tree -r --name-only FETCH_HEAD  0.4s
+💻 $ git -C /home/nikhil/dev/hermes-agent ls-tree -r --name-only FETCH_HEAD | python -c 'import sys; print("".join(x for x in sys.stdin if "kinos" in x.lower() or "experiment" in x.lower() or "charter" in x.lower() or "phase0" in x.lower()))'
+💻 $ git -C /home/nikhil/dev/hermes-agent ls-tree -r --name-only FETCH_HEAD | python -c 'import sys; a=[x.strip() for x in sys.stdin]; print("\n".join(x for x in a if x.startswith("docs/") or x.startswith("experiments/")))'
+📖 Read config.yaml L1150-1249
+📖 Read config.yaml L1480-1599
+📖 Read config.yaml L900-929
+🔎 Grep ^approvals:|^  mode:|write_approval|confirm|native|cap|memory_char_limit|user_char_limit|character|approval
+📖 Read config.yaml L540-639
+✗ $ git -C /home/nikhil/dev/hermes-agent show FETCH_HEAD:config.yaml 2>/dev/null | true + 1 command [exit 128]
+🔎 Grep ^approvals:|^toolsets:|^security:|^terminal:|^user_profile_enabled:|^memory_char_limit:|^user_char_limit:|^    provider: local|^  write_approval:|^  telegram:|^  discord:|^  web:|^  browser:|^  terminal:|^  file:|^  debug:|^  warning:|^  ask:|^  yolo:
+✗ Read .git L2570-2579 [Cannot read '/home/nikhil/dev/hermes-agent/.g...]
+💻 $ git ls-remote https://github.com/nickhilster/hermes-agent.git 'refs/heads/*'  1.0s
+💻 $ git -C /home/nikhil/dev/hermes-agent show FETCH_HEAD:AGENTS.md + 2 commands  0.1s
+📖 Read config.yaml L1-70
+💻 $ python -c 'import pathlib; p=pathlib.Path("/home/nikhil/.hermes/config.yaml"); s=p.read_text().splitlines(); keys=["approvals:","memory:","memory_char_limit:","user_char_limit:","user_profile_enabled:","write_approval:","toolsets:","platform_toolsets:","stt:","provider: local","gateway:","streaming:","allow_all_users:","telegram:","voice_chat_mode:","protected_instruction_files:"]; print("\n".join(f"{i+1}: {line}" for i,line in enumerate(s) if any(k in line for k in keys)))'
+📖 Read config.yaml L1300-1369
+💻 $ python -c 'import pathlib; p=pathlib.Path("/home/nikhil/.hermes/config.yaml"); s=p.read_text().splitlines(); print("\n".join(f"{i+1}: {s[i]}" for i in range(430,440))); print("--- stt tail ---"); print("\n".join(f"{i+1}: {s[i]}" for i in range(1795,1845)))'
+✍️ Write /home/nikhil/graveyard-2026-11-17/KH-12-phase0-diff.md
+│ graveyard-2026-11-17/KH-12-phase0-diff.md
+│ @@ -0,0 +1,70 @@
+│ +# KH-12-prep — Phase 0 config diff (DRAFT ONLY)
+│ +
+│ +Date: 2026-11-17 (local machine time: America/Toronto)
+│ +Target: hermes-dell / dell-nik (identity supplied in work order; host identity not independently verified)
+│ +Live config inspected read-only: `/home/nikhil/.hermes/config.yaml` (`HERMES_HOME=/home/nikhil/.hermes`). No config or service changes made.
+│ +
+│ +## Source and evidence caveat
+│ +
+│ +The work order names `nickhilster/hermes-agent` and requests `docs/00-charter.md`, `docs/06-the-experiment.md`, and `docs/08-kinos-mode.md`. The locally available checkout is `/home/nikhil/dev/hermes-agent`, whose configured remotes point to `Teambotics-Inc/hermes-agent` and `NousResearch/hermes-agent`; the supplied repository's sole public `main` was checked at `5dd4b6bd87bd85546693f565691622f360086396`. That tree does not contain `docs/` or the three named files, and the GitHub contents endpoint for `nickhilster/hermes-agent/docs` returned 404. Therefore the locked v0.2 experiment text and charter lines were NOT available to quote. No posture principles below are attributed to those absent documents. This is a deliberately provisional draft: rationale uses only the brief's stated purpose / already-applied facts and observable config comments; obtain the actual locked documents before treating proposals as approved or final.
+│ +
+│ +The work-order statement that memory budgets were raised x10 on 2026-11-17 is recorded as supplied context, not independently verified. The live file presently shows `memory.memory_char_limit: 220000` and `memory.user_char_limit: 137500`; the former agrees with the native cap mentioned in context, so it is not evidence of an un-applied change. Don't infer an older value or apply another x10 multiplier.
+│ +
+│ +## Proposed items
+│ +
+│ +Each item gives the effective configured value observed (or says when none was explicit), a draft proposal, rationale/source, and application risk. “Proposal” is not authorization.
+│ +
+│ +### Memory budgets and posture
+│ +
+│ +1. `~/.hermes/config.yaml` → `memory.memory_char_limit`: current `220000`; proposed `KEEP 220000`. Rationale: brief says budgets were already raised x10 to address the 2,200-character native cap; no locked charter text was obtainable to justify further adjustment. Risk if changed: could alter continuity and prompt size, confounding the baseline; no further change recommended.
+│ +2. `~/.hermes/config.yaml` → `memory.user_char_limit`: current `137500`; proposed `KEEP 137500` pending the actual plan text. Rationale: observed live value; no authorized target supplied. Risk if changed: user-profile context volume/content may shift experiment behavior.
+│ +3. `~/.hermes/config.yaml` → `memory.memory_enabled`: current `true`; proposed `KEEP true`. Rationale: preserve existing memory-bearing instance for the experiment. Risk if disabled/cleared: loss of lived-in continuity and changed behavior; this is experiment evidence, not disposable setup.
+│ +4. `~/.hermes/config.yaml` → `memory.user_profile_enabled`: current `false`; proposed `KEEP false` pending charter confirmation. Rationale: preserve current posture; no evidence that enabling is required. Risk if enabled: newly injected profile context changes responses and the instance's character.
+│ +5. `~/.hermes/config.yaml` → `memory.nudge_interval`: current `10`; proposed `KEEP 10`. Rationale: no plan line available to support changing it. Risk: altered memory-writing prompts and behavior.
+│ +6. Not observable from `config.yaml`: actual memory file contents, native provider hard caps, and memory backend/provider effective runtime. Proposed: record/inspect separately during authorized baseline, without editing or pruning. Rationale: the prompt calls for posture but contents themselves are historical evidence. Risk: any cleanup, reformatting, migration, or replacement could destroy evidence. Do not perform as part of this draft.
+│ +
+│ +### Approval and confirmation behavior
+│ +
+│ +7. `~/.hermes/config.yaml` → `approvals.*`: no explicit top-level `approvals` block was found; effective approval mode/runtime behavior is therefore not established by this file alone. Proposed: NO CHANGE until inspect the actual locked plan and confirm the intended approval mode, plus a supported read-only runtime/config query. Rationale: absent plan text gives no safe target. Risk: switching to a more permissive mode could authorize consequential tool activity; switching stricter could interrupt the task battery and change latency/interaction. Do not infer `off`, `smart`, or `manual` from absence.
+│ +8. `~/.hermes/config.yaml` → `plugins.enabled`, `plugins.entries.muse-harness.settings.approval_mode`: current plugin list includes `muse-harness`; its setting is `denyUnmatched`. Proposed: KEEP. Rationale: observable guardrail, unrelated to permission to alter it. Risk: relaxing it may widen plugin action surface and alter the mediation pathway; tightening it may block task-battery operations.
+│ +9. `~/.hermes/config.yaml` → `security.approval.*`: no active block observed (only commented example); effective defaults/plugin transports not confirmed. Proposed: NO CHANGE pending documentation and runtime evidence. Risk: unsupported edits could silently alter tool-confirmation semantics or fail to parse.
+│ +
+│ +### Tool surface
+│ +
+│ +10. `~/.hermes/config.yaml` → `platform_toolsets.cli`: current explicit list includes broad access (`a2a`, `browser`, `computer_use`, `cronjob`, `delegation`, `file`, `image_gen`, `kanban`, `memory`, `session_search`, `terminal`, `web`, `x_search`, and others) plus `muse_harness`. Proposed: NO CHANGE until the missing experiment document specifies a task-battery tool policy. Rationale: preserve baseline capability surface. Risk of narrowing: tasks may become impossible; risk of broadening: introduces new capabilities and confounds the experiment.
+│ +11. `~/.hermes/config.yaml` → `platform_toolsets.telegram` / `discord` (and other listed platform presets): currently `[hermes-<platform>, muse_harness]`. Proposed: KEEP. Rationale: this is a broad existing messaging tool surface; no plan line supports replacing it. Risk of change: changes how the instance can act from established channels and materially alters its character.
+│ +12. `~/.hermes/config.yaml` → `agent.disabled_toolsets`: current list disables `bot_room`, `catalog`, `context_engine`, `desktop_ui`, `discord`, `discord_admin`, `feishu_doc`, `feishu_drive`, `onboarding`, `project`, `stt`. Proposed: KEEP pending plan. Risk of enabling/disabling: changes discoverable capabilities; enabling integrations may expose additional actions/data.
+│ +13. `~/.hermes/config.yaml` → `mcp_servers`: several locally configured servers and enabled flags are present (e.g. Notion and Vercel enabled; many others disabled). Proposed: KEEP all as-is; do not connect, authorize, or alter MCP servers in Phase 0 without a precise charter requirement. Risk: added or removed external services change tool reach, data flows, and historical behavior.
+│ +14. `~/.hermes/config.yaml` → `agent.max_turns`: current `90`; proposed `KEEP 90` until the experiment specifies a limit. Risk: reducing it could truncate tasks; increasing it may affect cost and autonomy.
+│ +
+│ +### STT / voice
+│ +
+│ +15. `~/.hermes/config.yaml` → `stt.enabled`: current `true`; proposed `KEEP true` pending protocol. `stt.provider` is not explicitly set in the `stt` block; a later `provider: local` at line 1841 is nested under `code_execution`, not STT. The file has `stt.local.model: base`; do not mistake this for proof of effective provider. Proposed: observe the effective provider and package readiness read-only before T1–T7; do not install packages or restart in this run. Rationale: the experiment's required input modality is unknown because its text is unavailable. Risk: selecting local/cloud changes accuracy, latency, privacy, and whether speech is usable; package installation/restart is forbidden in this draft.
+│ +16. `~/.hermes/config.yaml` → `voice.voice_chat_mode`: current `chained`; proposed `KEEP chained` pending plan. Risk: changing voice interaction changes the lived-in input/output character and could affect task comparability.
+│ +
+│ +### Gateway and messaging posture
+│ +
+│ +17. `~/.hermes/config.yaml` → `gateway.allow_all_users`: current `false`; proposed `KEEP false`. Rationale: preserve current access control; no plan text supports relaxing it. Risk: allowing all users broadens access to this agent and its tools/history.
+│ +18. `~/.hermes/config.yaml` → `gateway.bot_loop_guard.enabled`: current `true`; proposed `KEEP true`. Rationale: safety guardrail. Risk: disabling permits bot-loop amplification; changing thresholds can alter message behavior.
+│ +19. `~/.hermes/config.yaml` → `gateway.multiplex_profiles`: current `true`; `gateway.profile_routes`: current `[]`; proposed `KEEP`. Rationale: observed routing posture, no plan instruction. Risk: routing changes can redirect messages across profile boundaries or change which historical agent responds.
+│ +20. `~/.hermes/config.yaml` → `streaming.enabled`: current `false`; proposed `KEEP false` pending experiment specification. Risk: enabling changes message timing/partial-output exposure and user experience; disabling it if already on would likewise change behavior.
+│ +21. `~/.hermes/config.yaml` → `display.busy_input_mode`: current `interrupt`; proposed `KEEP interrupt`. `display.cleanup_progress` is `false`; proposed `KEEP false`. Rationale: preserve established interrupt and progress-breadcrumb behavior. Risk: changing may alter recovery and erase visible traces of long-running work.
+│ +22. `~/.hermes/config.yaml` → messaging platform identities, allowlists, and live service wiring: only partial config is visible; credentials are not inspected, and no live gateway queries were performed. Proposed: do not alter. Risk: access loss, exposure, or destruction of operational evidence. Never include secrets/tokens in the eventual experiment report.
+│ +
+│ +### Instance identity / lived-in character — explicit hold
+│ +
+│ +23. Preserve `/home/nikhil/.hermes` memory, sessions/state database, logs, skills, plugin state, MCP auth, and messaging identities. These contain the instance's accumulated history. Proposed: no clearing, reinitializing, profile replacement, migration, or fresh-profile substitution. Rationale: work order explicitly says lived-in character is evidence. Risk if applied: irreversible loss of continuity and invalidation of the experiment's baseline.
+│ +24. Do not change model/provider, personality, SOUL/instruction text, or profile identity without the locked plan's explicit direction. Current model/provider are `gpt-6-luna-900k` / `openai-codex` in `model.default` / `model.provider`; the active personality and runtime overrides were not fully verified. Any such change is high-risk to the instance's voice and comparability.
+│ +
+│ +## Not observed / required before finalizing the Phase 0 diff
+│ +
+│ +- Exact charter and experiment requirements: BLOCKED; the three named docs are absent from the available repo tree and GitHub returned 404 for `nickhilster/hermes-agent/docs`.
+│ +- Host identity and which gateway process/profile is currently serving `hermes-dell`: supplied labels only; not independently verified.
+│ +- Effective approval mode, per-tool confirmation policy, current authorization/session overrides: not established from this config file.
+│ +- Effective STT provider/dependency readiness and actual voice path: not established.
+│ +- Live messaging adapter status, allowlists, and runtime overrides: not queried; secrets intentionally not read.
+│ +- Native cap and prior/pre-change memory limits: only the work-order statement; not independently evidenced.
+│ +
+│ +## Draft decision
+│ +
+│ +No config change is recommended from the evidence available. Preserve all observed values and historical state until the actual locked v0.2 documents are made available and their exact lines can be mapped to supported keys. This document is a proposal record only; it is not an applied diff. No gateway/service restart was issued.
+📖 Read KH-12-phase0-diff.md
+
+────────────────────────────────────────
+☤ Hermes
+Created ~/graveyard-2026-11-17/KH-12-phase0-diff.md.
+
+The draft records observed config values, proposed keep/no-change decisions, risks, and evidence gaps. The three requested charter/experiment documents were not available in the named repository, so their requirements could not be cited; the draft flags this as a blocker to finalizing the posture.
+
+Nothing was applied: no configuration changed, and no gateway or service was restarted.
+────────────────────────────────────────
+
+Resume this session with:
+  hermes --resume local-077dee4eaf3c98457c98c0f7c6fbdd716f8e540ed71758c33677e73c46200b86
+
+Session:        local-077dee4eaf3c98457c98c0f7c6fbdd716f8e540ed71758c33677e73c46200b86
+Duration:       2m 57s
+Messages:       74 (1 user, 72 tool calls)
