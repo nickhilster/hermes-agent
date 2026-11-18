@@ -1,0 +1,51 @@
+{
+  "eventVersion": 1,
+  "eventId": "f3d6496d35ce475ffc9ecf84236baed9286c2148e64d5f2309c3dc8f0be4791a",
+  "type": "issue.commented",
+  "createdAt": "2026-11-18T04:30:37.326Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-7",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-18T04:30:37.326Z",
+      "text": "Graveyard shift 2026-11-17: research run queued on hermes-dell (dell-nik) after KH-6, brief briefs/graveyard-kh7-tailscale.md. Report due at ~/graveyard-2026-11-17/KH-7-tailscale-report.md; research only, no Tailscale changes authorized."
+    },
+    "issue": {
+      "id": "KH-7",
+      "title": "Control-ceiling follow-up: Tailscale peer visibility exposure",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "medium",
+      "labels": [
+        "security"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:50.184Z",
+      "updatedAt": "2026-11-18T04:30:37.326Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "tailscale status exposes the whole fleet's names/addresses to any user-level process (ceiling test finding 1). Document the exposure precisely; propose mitigations (ACLs, peer segmentation) for Nik's decision. No changes without his word.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T04:30:37.326Z",
+          "text": "Graveyard shift 2026-11-17: research run queued on hermes-dell (dell-nik) after KH-6, brief briefs/graveyard-kh7-tailscale.md. Report due at ~/graveyard-2026-11-17/KH-7-tailscale-report.md; research only, no Tailscale changes authorized."
+        }
+      ]
+    }
+  }
+}

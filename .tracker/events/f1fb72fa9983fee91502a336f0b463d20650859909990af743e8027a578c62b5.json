@@ -1,0 +1,52 @@
+{
+  "eventVersion": 1,
+  "eventId": "f1fb72fa9983fee91502a336f0b463d20650859909990af743e8027a578c62b5",
+  "type": "issue.commented",
+  "createdAt": "2026-11-18T04:30:37.139Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-6",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-18T04:30:37.139Z",
+      "text": "Graveyard shift 2026-11-17 (Nik: go as charted): research run launched on hermes-dell (dell-nik) 23:30 EST, brief briefs/graveyard-kh6-wayland.md. Report due at ~/graveyard-2026-11-17/KH-6-wayland-report.md on dell-nik; Muse files it to evidence in the morning pack."
+    },
+    "issue": {
+      "id": "KH-6",
+      "title": "Control-ceiling follow-up: Wayland GUI-driving gap",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "medium",
+      "labels": [
+        "research",
+        "security"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:49.840Z",
+      "updatedAt": "2026-11-18T04:30:37.150Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "Ceiling test (evidence/full-access-zenbook-2026-11-17) found launch-only desktop control: screenshots AccessDenied, no GUI driving under Wayland. Research legitimate routes (portal APIs, AT-SPI, X11 session trade-offs) and report options before any build.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T04:30:37.139Z",
+          "text": "Graveyard shift 2026-11-17 (Nik: go as charted): research run launched on hermes-dell (dell-nik) 23:30 EST, brief briefs/graveyard-kh6-wayland.md. Report due at ~/graveyard-2026-11-17/KH-6-wayland-report.md on dell-nik; Muse files it to evidence in the morning pack."
+        }
+      ]
+    }
+  }
+}
