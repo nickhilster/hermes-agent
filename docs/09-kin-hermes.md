@@ -152,5 +152,7 @@ installed system-wide, evidence files present).
   `~/dev/hermes-agent` on branch `chore/trackerbuddy-adopt`; doctor OK.
   Muse then set its identity: productName **"Kin-Hermes Fork"**, prefix
   **KF**, accent `#3847FF` — distinct from this repo's KH board.
-  Footprint is exactly one untracked `.tracker/` directory; the commit
-  (and any push of that branch) is Nik's, on his machine, at his word.
+  Footprint was exactly one untracked `.tracker/` directory; **Nik
+  committed it himself on dell-nik: `8f5611a1b8` on
+  `chore/trackerbuddy-adopt`** (10 files, lefthook pre-commit clean).
+  Any push of that branch remains Nik's call.
