@@ -146,3 +146,11 @@ installed system-wide, evidence files present).
   declaration) — the same pattern as this repo and the Teambotics
   front door. If a declared dependency is ever wanted in the fork, it
   goes through pnpm deliberately, as its own decision.
+
+- **Fork tracker initialized (2026-11-17, Nik on dell-nik + Muse):**
+  `trackerbuddy init` run from the trackerbuddy clone inside
+  `~/dev/hermes-agent` on branch `chore/trackerbuddy-adopt`; doctor OK.
+  Muse then set its identity: productName **"Kin-Hermes Fork"**, prefix
+  **KF**, accent `#3847FF` — distinct from this repo's KH board.
+  Footprint is exactly one untracked `.tracker/` directory; the commit
+  (and any push of that branch) is Nik's, on his machine, at his word.
