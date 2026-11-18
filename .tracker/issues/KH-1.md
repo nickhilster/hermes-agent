@@ -13,7 +13,7 @@ initiative: null
 cycle: null
 parent: null
 createdAt: "2026-11-17T23:33:48.453Z"
-updatedAt: "2026-11-18T04:30:37.822Z"
+updatedAt: "2026-11-18T12:10:52.781Z"
 startedAt: null
 completedAt: null
 canceledAt: null
@@ -32,3 +32,6 @@ Estate review input (hermes-zenbook, 2026-11-17): BoardyAnimated's rig drives mo
 
 ### CLI — 2026-11-18T04:30:37.821Z
 Graveyard shift 2026-11-17: state-sheet production spec drafted overnight by hermes-zenbook (asus-zenbook), brief briefs/graveyard-kh1-state-sheet.md. Spec due at ~/graveyard-2026-11-17/KH-1-state-sheet-spec.md; draft only, no code touched.
+
+### CLI — 2026-11-18T12:10:52.780Z
+Morning pack 2026-11-18: FAILED — NO SPEC PRODUCED. KH-1-state-sheet-spec.md does not exist on asus-zenbook; only the session log (filed at evidence/graveyard-2026-11-17/asus-zenbook/kh1-state-sheet.log). hermes-zenbook searched its scratch repo-review checkout, could not find evidence/zenbook-estate-review-2026-11-17.md or assets/hermes-character-concept-v4.webp there, could not confirm the Boardy theme schema, and declined to invent geometry — correct refusal, wrong-checkout input failure. Runner recorded rc=0, so the failure is invisible in runner.log. Held for Nik: re-brief with explicit verified file locations and re-run, or re-scope.
