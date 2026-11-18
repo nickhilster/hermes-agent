@@ -119,3 +119,15 @@ installed system-wide, evidence files present).
   only its releases repo (Teambotics-BackBurner) is on GitHub;
   `nickhilster/boardy108` is the Boardy stills project, not the desk
   app. The desk source's location is an open question for Nik.
+
+  **Correction (2026-11-17, later the same evening):** the "not found"
+  claim above was wrong in an instructive way. The source repo exists —
+  `Teambotics-BackBurner/boardy-at-the-desk`, live and private; dell-nik
+  holds the clone (`~/dev/boardy-at-the-desk`, 290 commits, origin
+  resolving normally under Nik's own credentials). It was invisible to
+  Muse's census because Muse's fine-grained PAT is not scoped to that
+  repo (API returns 404) — a token-scope blind spot, not an absence.
+  Archived repos were also checked (22 archived; the desk source is not
+  among them; only its releases repo is, archived). Rule reinforced:
+  a 404 from a scoped token proves the token's limits, never the
+  estate's contents.
