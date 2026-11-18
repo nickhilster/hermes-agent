@@ -13,7 +13,7 @@ initiative: null
 cycle: null
 parent: null
 createdAt: "2026-11-17T23:33:48.453Z"
-updatedAt: "2026-11-17T23:33:48.453Z"
+updatedAt: "2026-11-18T02:23:54.046Z"
 startedAt: null
 completedAt: null
 canceledAt: null
@@ -24,3 +24,8 @@ gitBranchName: null
 ## Description
 
 From docs/02 (concept v4 locked by Nik 2026-11-17: two eyes + brows + lips on the circle/staff/wings Glyph). Produce production SVG geometry for idle/run/review/wave/jump/failed/waiting with brow/eye/lip keyframes and wing/staff animation timing (darts and glides, never bounces). Acceptance: state sheet renders at 16px and full-screen; each state readable from face alone.
+
+## Comments
+
+### CLI — 2026-11-18T02:23:54.046Z
+Estate review input (hermes-zenbook, 2026-11-17): BoardyAnimated's rig drives mouth/gaze/posture from audio amplitude + state — the ancestor technique for the Glyph's animated lips. State sheet should spec amplitude→mouth mapping alongside brow/eye keyframes.

@@ -1,0 +1,52 @@
+{
+  "eventVersion": 1,
+  "eventId": "e6b29d9af426561bd22ac65f2b971b6a215056c5c6aaa980c889c92bb2211e40",
+  "type": "issue.commented",
+  "createdAt": "2026-11-18T02:23:54.046Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-1",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-18T02:23:54.046Z",
+      "text": "Estate review input (hermes-zenbook, 2026-11-17): BoardyAnimated's rig drives mouth/gaze/posture from audio amplitude + state — the ancestor technique for the Glyph's animated lips. State sheet should spec amplitude→mouth mapping alongside brow/eye keyframes."
+    },
+    "issue": {
+      "id": "KH-1",
+      "title": "Character state sheet: Glyph vector geometry, 7 activity states, brow/eye/lip keyframes",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "high",
+      "labels": [
+        "persona",
+        "design"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:48.453Z",
+      "updatedAt": "2026-11-18T02:23:54.046Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "From docs/02 (concept v4 locked by Nik 2026-11-17: two eyes + brows + lips on the circle/staff/wings Glyph). Produce production SVG geometry for idle/run/review/wave/jump/failed/waiting with brow/eye/lip keyframes and wing/staff animation timing (darts and glides, never bounces). Acceptance: state sheet renders at 16px and full-screen; each state readable from face alone.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T02:23:54.046Z",
+          "text": "Estate review input (hermes-zenbook, 2026-11-17): BoardyAnimated's rig drives mouth/gaze/posture from audio amplitude + state — the ancestor technique for the Glyph's animated lips. State sheet should spec amplitude→mouth mapping alongside brow/eye keyframes."
+        }
+      ]
+    }
+  }
+}

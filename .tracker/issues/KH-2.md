@@ -13,7 +13,7 @@ initiative: null
 cycle: null
 parent: null
 createdAt: "2026-11-17T23:33:48.706Z"
-updatedAt: "2026-11-17T23:33:48.706Z"
+updatedAt: "2026-11-18T02:23:53.785Z"
 startedAt: null
 completedAt: null
 canceledAt: null
@@ -24,3 +24,8 @@ gitBranchName: null
 ## Description
 
 Remove the third-party Petdex gallery path in Teambotics-Inc/hermes-agent; ship one first-party character (the Glyph, docs/02) mapped to the existing activity-state plumbing. Docs: docs/09-kin-hermes.md build item 2.
+
+## Comments
+
+### CLI — 2026-11-18T02:23:53.756Z
+Estate review input (hermes-zenbook, 2026-11-17; evidence/zenbook-estate-review-2026-11-17.md): Boardy at the Desk's plumbing is confirmed as the port source — hook → local server → session state machine → UI, with native-flow fallback. Two design warnings ride along: (1) its mobile read-only snapshots still leak working dirs/titles/outputs and its connection-info endpoint is unauthenticated — the Kin-Hermes Ready Surface must not repeat that; (2) auto-approve-all there is a real permission decision with no bubble — our approval UX treats that pattern as the anti-example.
