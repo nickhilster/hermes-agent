@@ -131,3 +131,18 @@ installed system-wide, evidence files present).
   among them; only its releases repo is, archived). Rule reinforced:
   a 404 from a scoped token proves the token's limits, never the
   estate's contents.
+
+- **Fork adopt finding (2026-11-17 evening):** `trackerbuddy adopt
+  --apply` was run by Nik on dell-nik in the fork clone
+  (`chore/trackerbuddy-adopt` branch) and **failed cleanly at its npm
+  install step — nothing was changed.** Root cause, verified from the
+  npm debug log: **the fork is a pnpm-only repo** (preinstall guard pins
+  pnpm via `pm/lock.json`; `pnpm-workspace.yaml`; node_modules in pnpm
+  layout; no package-lock.json), and system npm 9.2's arborist crashes
+  on that tree (`Link.matches` null). Adopt assumes npm; per the Init
+  contract, a repo's package-manager policy is a signal, not an obstacle
+  to route around. **House route for the fork: run `trackerbuddy init`
+  directly from the trackerbuddy clone** (scaffold only, no dependency
+  declaration) — the same pattern as this repo and the Teambotics
+  front door. If a declared dependency is ever wanted in the fork, it
+  goes through pnpm deliberately, as its own decision.
