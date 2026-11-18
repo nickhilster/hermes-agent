@@ -1,0 +1,52 @@
+{
+  "eventVersion": 1,
+  "eventId": "535b11afc09fdd35b4b90af8a157b1e287e3df45c8a3d8c73d4a19f9a8f39179",
+  "type": "issue.commented",
+  "createdAt": "2026-11-18T01:21:34.461Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-13",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-18T01:21:34.461Z",
+      "text": "Schedule update (Nik, 2026-11-17 evening): the setup call moves to tomorrow, Nov 18 — better shape for it. The full trial run may move to Nov 20, after Nik's LTB hearing on Nov 19. Until then, effort goes to the Nous application."
+    },
+    "issue": {
+      "id": "KH-13",
+      "title": "Father dogfood: deploy chat relay to xps-plex + setup call",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "high",
+      "labels": [
+        "dogfood",
+        "kinos"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:52.043Z",
+      "updatedAt": "2026-11-18T01:21:34.481Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "Prototype built and round-trip tested (~/workspace/father-chat-dogfood/). Deploy relay to xps-plex tailnet :8791 on Nik's go; father-side setup: Tailscale + Windows OpenSSH + Muse key (administrators_authorized_keys if admin account). First live round-trip, then one real task (PDF resize). Consent framing in the prototype README.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T01:21:34.461Z",
+          "text": "Schedule update (Nik, 2026-11-17 evening): the setup call moves to tomorrow, Nov 18 — better shape for it. The full trial run may move to Nov 20, after Nik's LTB hearing on Nov 19. Until then, effort goes to the Nous application."
+        }
+      ]
+    }
+  }
+}
