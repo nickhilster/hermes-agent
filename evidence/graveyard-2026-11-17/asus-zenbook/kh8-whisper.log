@@ -1,0 +1,112 @@
+Query: # Graveyard brief KH-8 — Whisper/STT close-out (hermes-zenbook, 
+asus-zenbook)
+
+Overnight run, directed by Nik through Muse (2026-11-17). Nik
+already authorized the user-level Whisper install on this machine in
+the "Hermes Round 1" session; this run executes and verifies it.
+Bounds: user-level changes only (your own env, uv/pip user installs,
+Hermes config for STT). No sudo, no system packages, no pkexec. If
+the only path needs elevation, stop and report that as the blocker.
+
+Known starting state (dated, re-verify): config has stt.enabled:
+true with local model "base"; faster-whisper was NOT found in the
+searched paths on 2026-11-17.
+
+Task: (1) Re-verify the current STT state: config values, whether
+faster-whisper imports in the actual Hermes runtime python (find
+the runtime the launcher uses; test the import there, not in a
+random python). (2) If missing, install user-level into the correct
+environment and re-test the import. (3) Prove transcription
+end-to-end WITHOUT a microphone: obtain or synthesize a short
+speech audio file (e.g., espeak/espeak-ng if present, or a small
+public sample) and transcribe it through the same code path Hermes
+uses; quote the transcript you got. If synthesis is unavailable,
+say exactly where the proof stopped. (4) Note model size, disk
+used, and load time — the father demographic's hardware is the
+reference, so cost matters.
+
+Deliverable: ~/graveyard-2026-11-17/KH-8-whisper-report.md on this
+machine, separating observed / tested / not-checked, + a 5-line
+summary in your final message.
+
+📚 Skill hermes-agent
+📚 Skill hermes-agent → references/configuration.md
+💻 $ date + 10 commands  2.4s
+💻 $ printf '%s\n' '--- repo ---' + 8 commands  1.1s
+💻 $ printf '%s\n' '--- launcher script ---' + 10 commands  0.5s
+💻 $ printf '%s\n' '--- transcription code ---' + 10 commands  1.5s
+💻 $ printf '%s\n' '--- config full stt ---' + 10 commands  0.2s
+💻 $ grep -n -A30 '^stt:' ~/.hermes/config.yaml + 2 commands
+💻 $ sed -n '1825,1875p' ~/.hermes/config.yaml + 2 commands
+💻 $ R=/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3 + 3 commands  0.3s
+💻 $ # Generate synthesized speech and measure Hermes transcription path mkdir -p /home/nik/.hermes/cache/scratch/kh8 + 8 commands  0.1s
+📖 Reading tool details · 1 tool
+⚙️ Proc poll proc_6836256
+💻 $ mkdir -p /home/nik/.hermes/cache/scratch/kh8 + 3 commands  3.8s
+💻 $ command -v espeak-ng + 4 commands  2.2s
+💻 $ R=/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3 + 3 commands  0.5s
+✗ Fetch www.openslr.org [OpenAI Native Web Search (Codex Responses) is...]
+💻 $ curl -L --fail --silent --show-error --range 0-1048575 -o /home/nik/.hermes/cache/scratch/kh8/sample.part https://www.openslr.org/resources/12/dev-clean.tar.gz + 2 commands  1.2s
+💻 $ curl -L --fail --silent --show-error -o /home/nik/.hermes/cache/scratch/kh8/dev-clean.tar.gz https://www.openslr.org/resources/12/dev-clean.tar.gz + 1 command  14.6s
+💻 $ tar -tzf /home/nik/.hermes/cache/scratch/kh8/dev-clean.tar.gz | grep -m 1 '\.flac$'
+💻 $ tar -xOf /home/nik/.hermes/cache/scratch/kh8/dev-clean.tar.gz LibriSpeech/dev-clean/2277/149896/2277-149896.trans.txt | grep '^2277-149896-0026 ' + 2 commands  1.8s
+💻 $ R=/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3 + 4 commands  1.7s
+💻 $ find ~/.cache/huggingface -type f -printf '%p %s\n' 2>/dev/null + 2 commands
+💻 $ R=/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3 + 11 commands  1.7s
+💻 $ R=/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3 + 3 commands  1.0s
+🔧 Patch  0.3s
+│ /dev/null → b//home/nik/graveyard-2026-11-17/KH-8-whisper-report.md
+│ +# KH-8 — Whisper/STT close-out
+│ +
+│ +Machine: asus-zenbook, hostname `Zen-nik`; observed Tuesday, November 17, 2026 (EST).
+│ +Scope: user-level only. No installation or configuration changes were made during this run; the tested runtime already contained faster-whisper and the base model.
+│ +
+│ +## Observed
+│ +
+│ +- `hermes` resolves to `/home/nik/.local/bin/hermes`, which execs `/home/nik/.hermes/hermes-agent/.hermes/bin/hermes`.
+│ +- Runtime Python selected by Hermes: `/home/nik/.hermes/installs/d0123adc22cc8fbe/environments/e1c66fbe733d4299a573d2d043585cbd/venv/bin/python3` (Python 3.14 site-packages). This was identified from the actual runtime path, not system Python.
+│ +- Effective STT config read through Hermes' own `tools.transcription_tools._load_stt_config()`: enabled `true`; provider resolved `local`; local model `base`; language `en`. `stt.provider` is omitted from YAML and auto-detects as local. The YAML is `/home/nik/.hermes/config.yaml`.
+│ +- Runtime imports report faster-whisper 1.2.1 and ctranslate2 4.8.3. Their package directory exists in the runtime. Although the dated brief said it was previously not found, on this run the import succeeded immediately; no install was necessary or attempted.
+│ +- Host observed: x86_64, 11th Gen Intel Core i7-1165G7 @ 2.80 GHz, 8 logical CPUs, 14 GiB RAM (9.3 GiB available at inspection), 4 GiB swap. This describes this Zenbook only; the father's reference hardware was not specified or independently checked.
+│ +- Whisper base model cache artifact: 145,217,532 bytes (about 138.5 MiB), at `~/.cache/huggingface/hub/blobs/0c/0c4d8d814973160f53608ff0aa1618a90abbce9ed632bbc54930475ba82ce973`. The model snapshot directory itself uses 2.6 MiB because the large blob is stored in the shared Hugging Face blob directory. Total `~/.cache/huggingface` is 142 MiB, including unrelated/support/cache files; not all of that is attributable to this model.
+│ +- Relevant installed runtime package directories observed: faster-whisper 1.5 MiB, ctranslate2 63 MiB, PyAV 32 MiB. These directory sizes should not be summed as unique disk use without accounting for shared files.
+│ +- Speech synthesis utilities `espeak`, `espeak-ng`, `festival`, and `flite` were not found. `spd-say` exists but did not produce a WAV file with the attempted `-w` invocation. Instead, a short public LibriSpeech dev-clean FLAC was downloaded from OpenSLR; its reference transcript was extracted from the corpus metadata. Temporary audio and the downloaded archive remain under `/home/nik/.hermes/cache/scratch/kh8/`.
+│ +
+│ +## Tested
+│ +
+│ +- Imported `faster_whisper` using the Hermes runtime Python above; import path was under that runtime's Python 3.14 `site-packages`.
+│ +- Called Hermes' actual public dispatcher `tools.transcription_tools.transcribe_audio()` on the downloaded speech FLAC. Result: `success=True`, provider `local`, transcript: “The long drizzle had begun, pedestrians had turned up collars and trousers at the bottom.” The corpus reference is “THE LONG DRIZZLE HAD BEGUN PEDESTRIANS HAD TURNED UP COLLARS AND TROUSERS AT THE BOTTOM”; the recognized wording matches, with punctuation/case normalized.
+│ +- Timed end-to-end transcription: 1.138 seconds inside the call (1.47 seconds process wall time), on a repeat run with the model cache warm. Peak RSS reported by `/usr/bin/time`: 515,452 KiB. The audio is a short excerpt; this is not a throughput benchmark.
+│ +- Separately timed direct `WhisperModel('base', device='cpu', compute_type='int8')` construction using the already-cached model: 0.406 seconds first construction, 0.209 seconds second construction in the same process. This is model object construction, not a fresh-process cold start; transcription timing above includes dispatcher/audio preparation.
+│ +
+│ +## Not checked / limits
+│ +
+│ +- No package install was performed because the required import already worked. No Hermes config mutation was made.
+│ +- No microphone, live gateway message, or physical recording was tested. The proof covers Hermes' local transcription dispatcher path with a real speech recording and no microphone.
+│ +- The first attempted `spd-say -w` file-generation route failed to create a WAV; that failed attempt was detected before the successful LibriSpeech route.
+│ +- Father-demographic hardware/performance suitability cannot be assessed without the specific hardware and workload. The Zenbook measurements are not a fleet or demographic acceptance claim.
+│ +- No comparison to other model sizes, sustained-load test, multilingual test, power/battery measurement, or full disk attribution was performed.
+│ +- No live install/config baseline from 2026-11-17 was independently retrieved; only the current state and the brief's dated claim are available here.
+│ +
+│ +## Reproduction details
+│ +
+│ +The tested dispatcher was imported with the Hermes runtime Python and Hermes source at `/home/nik/.hermes/hermes-agent`; the audio input was `/home/nik/.hermes/cache/scratch/kh8/sample.flac`. The process called `transcribe_audio(path)` and returned the result quoted above. The sample was LibriSpeech `dev-clean/2277/149896/2277-149896-0026.flac`, whose corresponding reference line was read from `2277-149896.trans.txt` in the downloaded archive.
+📖 Read KH-8-whisper-report.md
+
+────────────────────────────────────────
+☤ Hermes
+KH-8 report saved at /home/nik/graveyard-2026-11-17/KH-8-whisper-report.md.
+
+Observed: STT is enabled; provider resolves to local, model base.
+Tested: faster-whisper imports in Hermes’ actual runtime; no install was needed.
+Tested: Hermes’ transcription dispatcher handled a public speech sample without a microphone.
+Transcript: “The long drizzle had begun, pedestrians had turned up collars and trousers at the bottom.”
+Not checked: performance on the father-demographic hardware; its specs were not provided.
+────────────────────────────────────────
+
+Resume this session with:
+  hermes --resume local-1109c8de637ca7df59e2c6d49c726d6a0af0213fd714597031f182f72a2d1da7
+
+Session:        local-1109c8de637ca7df59e2c6d49c726d6a0af0213fd714597031f182f72a2d1da7
+Duration:       2m 53s
+Messages:       55 (1 user, 53 tool calls)
