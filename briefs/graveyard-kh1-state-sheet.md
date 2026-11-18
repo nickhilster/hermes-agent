@@ -1,0 +1,38 @@
+# Graveyard brief KH-1 — Glyph state sheet, production spec (hermes-zenbook, asus-zenbook)
+
+Overnight drafting run, directed by Nik through Muse (2026-11-17).
+DRAFT ONLY: write the spec document; do not modify the fork, the
+live install, or any code. Art references are in the project repo.
+
+Read first: project repo nickhilster/hermes-agent — docs/02-persona-
+the-hermes-character.md (the locked Glyph concept: circle head,
+vertical staff, two wing arcs, electric blue #3847FF on black; face
+grammar = brows + two eyes + lips; wings must sit tighter/higher
+than the v1 art, winged-helm style, smaller than the head), and
+evidence/zenbook-estate-review-2026-11-17.md (your own review:
+BoardyAnimated's rig drives mouth/gaze/posture from audio amplitude
++ state). The concept art is assets/hermes-character-concept-v4.webp
+in the same repo.
+
+Task: produce the production state-sheet spec a builder can
+implement without further design decisions:
+1. Canonical SVG geometry: viewBox, the exact primitives for head,
+   staff, wings (paths/coordinates, stroke widths), and the face
+   element anchor points. One master glyph; states are
+   configurations of it, never redraws.
+2. The 7 activity states (idle, run, review, wave, jump, failed,
+   waiting): for each — brow position/shape, eye shape, lip shape,
+   staff tilt, wing pose, in the locked face grammar.
+3. Motion: keyframes and timing per state transition. A messenger
+   darts and glides, never bounces. Spec durations and easing in
+   numbers, and the idle loop.
+4. Voice: amplitude→mouth mapping (from the BoardyAnimated rig
+   pattern): input range, mouth shapes, smoothing.
+5. A theme.json-style mapping sketch (state → configuration) in the
+   boardy-at-the-desk theme format, so the fork port (KH-2) has a
+   target.
+6. Acceptance checks: how a reviewer verifies an implementation
+   matches this spec at 16px, 64px, and full-screen.
+
+Deliverable: ~/graveyard-2026-11-17/KH-1-state-sheet-spec.md on
+this machine + a 5-line summary in your final message.
