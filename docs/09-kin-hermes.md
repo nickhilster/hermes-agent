@@ -156,3 +156,14 @@ installed system-wide, evidence files present).
   committed it himself on dell-nik: `8f5611a1b8` on
   `chore/trackerbuddy-adopt`** (10 files, lefthook pre-commit clean).
   Any push of that branch remains Nik's call.
+
+- **The KF board is mirrored here (Nik, 2026-11-17):** this repo is the
+  control room for the fork, so the fork's tracker is mirrored at
+  `fork-tracker/` (see `fork-tracker/MIRROR.md`). Source of truth stays
+  in the fork; the mirror is refreshed by Muse whenever the fork board
+  changes. KH = project work (native here), KF = fork code work
+  (mirrored). *Process note:* the first mirror attempt briefly merged
+  the two `.tracker` trees locally (same directory name); the KH board
+  was restored byte-for-byte from GitHub HEAD and verified (doctor OK,
+  13 issues, nextId 14) before anything was pushed — no bad state ever
+  left this machine.
