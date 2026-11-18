@@ -53,3 +53,32 @@ After hermes-zenbook's study run completes and Muse has caught up:
 discuss and decide the three instruction sets with Nik, then implement
 — one instance at a time, dell-nik last (its lived-in state makes it
 the most delicate to adjust, and its history is evidence).
+
+## First draft in — hermes-zenbook (2026-11-17)
+
+hermes-zenbook drafted its own instruction set under brief
+`briefs/zenbook-self-instructions.md`; the full draft is filed at
+`drafts/zenbook-instructions-draft-2026-11-17.md`. It stayed inside
+the bound: document only, no live config changed.
+
+Notable, in the lead's review:
+- It refined the seed itself: the newcomer seat is **a test
+  instrument, not a proxy for all first-time users** — freshness
+  exposes assumptions; it does not establish what newcomers generally
+  experience. Accepted as the better formulation.
+- It encoded the input rule against the lead as well: briefs may be
+  authored by Muse, but task direction reaches an instance from Nik
+  only; any other route is not authorization. That is the awareness
+  design working as intended.
+- Its verification taxonomy (observed / tested / inferred / reported
+  by another agent / not checked) is stronger than the seed and
+  should propagate to the other two sets.
+- Open design questions it surfaced honestly: the precedence order
+  when instance, repo rule, tracking, and a new brief conflict; the
+  installation substrate and rollback; Instinct/David remits.
+
+**Its largest self-declared gap, partially closed by the lead
+(2026-11-17, live check of asus-zenbook):** Hermes v0.23.2
+(ae2a81ccc0), provider openai-codex, gateway running — all matching
+the repo's dated records. Still unchecked: STT runtime end-to-end,
+disk encryption state, desktop build state.
