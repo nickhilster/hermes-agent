@@ -1,0 +1,8 @@
+RUNNER-START 2026-11-17T23:30:19-05:00
+=== kh6-wayland START 2026-11-17T23:30:19-05:00 ===
+=== kh6-wayland END 2026-11-17T23:32:42-05:00 rc=0 ===
+=== kh7-tailscale START 2026-11-17T23:32:42-05:00 ===
+=== kh7-tailscale END 2026-11-17T23:34:28-05:00 rc=0 ===
+=== kh12-phase0-prep START 2026-11-17T23:34:28-05:00 ===
+=== kh12-phase0-prep END 2026-11-17T23:37:27-05:00 rc=0 ===
+RUNNER-DONE 2026-11-17T23:37:27-05:00
