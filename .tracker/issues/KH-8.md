@@ -13,7 +13,7 @@ initiative: null
 cycle: null
 parent: null
 createdAt: "2026-11-17T23:33:50.622Z"
-updatedAt: "2026-11-18T04:30:37.684Z"
+updatedAt: "2026-11-18T12:10:52.491Z"
 startedAt: null
 completedAt: null
 canceledAt: null
@@ -29,3 +29,6 @@ asus-zenbook: faster-whisper install pending (hermes-zenbook's task, Muse tracks
 
 ### CLI — 2026-11-18T04:30:37.683Z
 Graveyard shift 2026-11-17: run queued on hermes-zenbook (asus-zenbook) after Round 1 goes quiet — executes the Whisper install Nik authorized in Round 1 (user-level only) + file-based transcription proof. Report due at ~/graveyard-2026-11-17/KH-8-whisper-report.md. Dell runtime check and legion-win wiring remain open after this.
+
+### CLI — 2026-11-18T12:10:52.490Z
+Morning pack 2026-11-18: DELIVERED AND PROVEN on asus-zenbook. Report filed at evidence/graveyard-2026-11-17/asus-zenbook/KH-8-whisper-report.md. Finding: faster-whisper 1.2.1 already imports in the real Hermes runtime — no install was needed or made; Hermes' own transcribe_audio() transcribed a LibriSpeech sample correctly end-to-end (1.14s, ~515MB RSS, base model ~139MiB). Zenbook STT closed. Remaining KH-8 scope NOT in this run: dell-nik runtime proof, legion-win wiring, spoken test per machine.
