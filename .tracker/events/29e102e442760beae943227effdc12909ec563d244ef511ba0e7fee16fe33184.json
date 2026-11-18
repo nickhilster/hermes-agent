@@ -1,0 +1,57 @@
+{
+  "eventVersion": 1,
+  "eventId": "29e102e442760beae943227effdc12909ec563d244ef511ba0e7fee16fe33184",
+  "type": "issue.commented",
+  "createdAt": "2026-11-18T14:50:41.625Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-13",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-18T14:50:41.625Z",
+      "text": "Relay DEPLOYED 2026-11-18 09:50 EST on Nik's word: father-chat-relay user service on xps-plex (~/father-chat/, enabled, active), port 8791. Round-trip verified over the real tailnet path from dell-nik: page 200 at http://100.76.154.18:8791/, POST /send accepted, reply.py reply merged correctly; test messages wiped, store starts empty. Note: server binds 0.0.0.0, so it also answers on the home LAN (192.168.1.195:8791) — same trust domain as Plex on that box, no external exposure. Remaining for the call: Tailscale + OpenSSH Server + Muse key on father's Windows laptop (check Administrator account type for key placement), browser bookmark, first message. Trial slot options unchanged: call today, or full trial Nov 20 post-LTB-hearing."
+    },
+    "issue": {
+      "id": "KH-13",
+      "title": "Father dogfood: deploy chat relay to xps-plex + setup call",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "high",
+      "labels": [
+        "dogfood",
+        "kinos"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:52.043Z",
+      "updatedAt": "2026-11-18T14:50:41.653Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "Prototype built and round-trip tested (~/workspace/father-chat-dogfood/). Deploy relay to xps-plex tailnet :8791 on Nik's go; father-side setup: Tailscale + Windows OpenSSH + Muse key (administrators_authorized_keys if admin account). First live round-trip, then one real task (PDF resize). Consent framing in the prototype README.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T01:21:34.461Z",
+          "text": "Schedule update (Nik, 2026-11-17 evening): the setup call moves to tomorrow, Nov 18 — better shape for it. The full trial run may move to Nov 20, after Nik's LTB hearing on Nov 19. Until then, effort goes to the Nous application."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-18T14:50:41.625Z",
+          "text": "Relay DEPLOYED 2026-11-18 09:50 EST on Nik's word: father-chat-relay user service on xps-plex (~/father-chat/, enabled, active), port 8791. Round-trip verified over the real tailnet path from dell-nik: page 200 at http://100.76.154.18:8791/, POST /send accepted, reply.py reply merged correctly; test messages wiped, store starts empty. Note: server binds 0.0.0.0, so it also answers on the home LAN (192.168.1.195:8791) — same trust domain as Plex on that box, no external exposure. Remaining for the call: Tailscale + OpenSSH Server + Muse key on father's Windows laptop (check Administrator account type for key placement), browser bookmark, first message. Trial slot options unchanged: call today, or full trial Nov 20 post-LTB-hearing."
+        }
+      ]
+    }
+  }
+}
