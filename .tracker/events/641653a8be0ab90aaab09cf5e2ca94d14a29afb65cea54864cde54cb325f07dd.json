@@ -1,0 +1,61 @@
+{
+  "eventVersion": 1,
+  "eventId": "641653a8be0ab90aaab09cf5e2ca94d14a29afb65cea54864cde54cb325f07dd",
+  "type": "issue.commented",
+  "createdAt": "2026-11-21T01:45:02.483Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-12",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-21T01:45:02.483Z",
+      "text": "RE-RUN DELIVERED 2026-11-20 (overnight queue): v2 Phase 0 diff from hermes-dell with docs 00/06/08 read at the canonical checkout ~/dev/kin-hermes. Filed at evidence/kh12-rerun-2026-11-20/. NOTHING APPLIED — Muse verified ~/.hermes/config.yaml byte-identical before/after (sha256 23de9559...). Central finding: docs specify posture, not exact values; diff records decisions Nik owes — sharpest: NO active security.approval block in live config (authority-blocking not configured), stt in disabled_toolsets while stt.enabled true, and the exact Phase 0 tool surface unenumerated. Persistent session: kin-hermes-dell (local-a345fe77)."
+    },
+    "issue": {
+      "id": "KH-12",
+      "title": "Nous experiment: Phase 0 KinOS-posture config + T1–T7 battery",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "high",
+      "labels": [
+        "experiment"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:51.763Z",
+      "updatedAt": "2026-11-21T01:45:02.484Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "Plan v0.2 is LOCKED (docs/06). Apply Phase 0 posture configuration, then run the seven-task battery on hermes-dell (PM) and hermes-zenbook (FDE) with evidence per task. Deviations go in the deviation log, never patched into the plan.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T04:30:37.472Z",
+          "text": "Graveyard shift 2026-11-17: KH-12-PREP only — hermes-dell drafts the Phase 0 config diff overnight (briefs/graveyard-kh12-phase0-prep.md), applies NOTHING. Diff due at ~/graveyard-2026-11-17/KH-12-phase0-diff.md for Nik's morning review. T1–T7 battery still not started."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-18T12:10:52.642Z",
+          "text": "Morning pack 2026-11-18: PREP DRAFT DELIVERED, NOTHING APPLIED — independently verified by Muse (dell-nik ~/.hermes/config.yaml mtime 2026-11-17 12:24 EST, before the run). Draft filed at evidence/graveyard-2026-11-17/dell-nik/KH-12-phase0-diff.md. Limitation: hermes-dell could not read docs/00, 06, 08 (searched the fork clone, got 404 for the project repo), so every item is KEEP/NO CHANGE pending the locked v0.2 text — the draft is a current-values inventory, not an applicable diff. Held for Nik: re-run prep with project docs reachable, or accept KEEP-all as baseline. T1-T7 still not started."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-21T01:45:02.483Z",
+          "text": "RE-RUN DELIVERED 2026-11-20 (overnight queue): v2 Phase 0 diff from hermes-dell with docs 00/06/08 read at the canonical checkout ~/dev/kin-hermes. Filed at evidence/kh12-rerun-2026-11-20/. NOTHING APPLIED — Muse verified ~/.hermes/config.yaml byte-identical before/after (sha256 23de9559...). Central finding: docs specify posture, not exact values; diff records decisions Nik owes — sharpest: NO active security.approval block in live config (authority-blocking not configured), stt in disabled_toolsets while stt.enabled true, and the exact Phase 0 tool surface unenumerated. Persistent session: kin-hermes-dell (local-a345fe77)."
+        }
+      ]
+    }
+  }
+}

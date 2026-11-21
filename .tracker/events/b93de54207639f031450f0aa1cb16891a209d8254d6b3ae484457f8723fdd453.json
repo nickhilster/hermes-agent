@@ -1,0 +1,52 @@
+{
+  "eventVersion": 1,
+  "eventId": "b93de54207639f031450f0aa1cb16891a209d8254d6b3ae484457f8723fdd453",
+  "type": "issue.commented",
+  "createdAt": "2026-11-21T01:45:02.847Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-11",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-21T01:45:02.847Z",
+      "text": "Status correction (2026-11-20, Muse): no longer parked at the placement commit. Phase B (2026-11-18): run 1 blocked honestly; the continuation completed the API portion — companion router mounted, pairing token (0600, route-local bearer), protected rotation, QR data, GET /api/companion/sessions (commits 6444a9c499, 24929adab8, on the pushed feat/companion-webapp branch). Still outstanding: the mobile UI and automated companion tests."
+    },
+    "issue": {
+      "id": "KH-11",
+      "title": "Companion app: PARKED at placement commit ba47d16a25",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "low",
+      "labels": [
+        "parked",
+        "companion"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:51.424Z",
+      "updatedAt": "2026-11-21T01:45:02.848Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "Milestone 1 stopped after an empty placement commit on dell-nik (feat/companion-webapp). Official mobile beta waitlist exists; cap at M1. Resume only on Nik's word (docs/09).",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-21T01:45:02.847Z",
+          "text": "Status correction (2026-11-20, Muse): no longer parked at the placement commit. Phase B (2026-11-18): run 1 blocked honestly; the continuation completed the API portion — companion router mounted, pairing token (0600, route-local bearer), protected rotation, QR data, GET /api/companion/sessions (commits 6444a9c499, 24929adab8, on the pushed feat/companion-webapp branch). Still outstanding: the mobile UI and automated companion tests."
+        }
+      ]
+    }
+  }
+}

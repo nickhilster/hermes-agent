@@ -1,0 +1,67 @@
+{
+  "eventVersion": 1,
+  "eventId": "f35701f696925722f68d72432cc5562a2c798804df945270527c41466d95a224",
+  "type": "issue.commented",
+  "createdAt": "2026-11-21T01:45:02.258Z",
+  "repository": {
+    "path": "/home/hatch/workspace/hermes-agent-seed",
+    "name": "hermes-agent-seed",
+    "idPrefix": "KH"
+  },
+  "issueId": "KH-1",
+  "payload": {
+    "comment": {
+      "author": "CLI",
+      "date": "2026-11-21T01:45:02.258Z",
+      "text": "RE-RUN DELIVERED 2026-11-20 (overnight queue): hermes-zenbook produced the production state-sheet spec from the canonical checkout ~/dev/kin-hermes (all inputs at verified absolute paths). Spec + report + log filed at evidence/kh1-rerun-2026-11-20/; summary in evidence/MORNING-PACK-2026-11-20.md. All 7 states in the locked face grammar, numeric geometry + motion timings — labelled PROPOSED values (references lock style, not coordinates); Nik's review is the approval gate. Persistent session: kin-hermes-zenbook (local-ba856c4b)."
+    },
+    "issue": {
+      "id": "KH-1",
+      "title": "Character state sheet: Glyph vector geometry, 7 activity states, brow/eye/lip keyframes",
+      "status": "Todo",
+      "statusType": "unstarted",
+      "priority": "high",
+      "labels": [
+        "persona",
+        "design"
+      ],
+      "assignee": null,
+      "createdBy": null,
+      "project": "Kin-Hermes",
+      "milestone": null,
+      "initiative": null,
+      "cycle": null,
+      "parent": null,
+      "createdAt": "2026-11-17T23:33:48.453Z",
+      "updatedAt": "2026-11-21T01:45:02.279Z",
+      "startedAt": null,
+      "completedAt": null,
+      "canceledAt": null,
+      "linearUrl": null,
+      "gitBranchName": null,
+      "description": "From docs/02 (concept v4 locked by Nik 2026-11-17: two eyes + brows + lips on the circle/staff/wings Glyph). Produce production SVG geometry for idle/run/review/wave/jump/failed/waiting with brow/eye/lip keyframes and wing/staff animation timing (darts and glides, never bounces). Acceptance: state sheet renders at 16px and full-screen; each state readable from face alone.",
+      "comments": [
+        {
+          "author": "CLI",
+          "date": "2026-11-18T02:23:54.046Z",
+          "text": "Estate review input (hermes-zenbook, 2026-11-17): BoardyAnimated's rig drives mouth/gaze/posture from audio amplitude + state — the ancestor technique for the Glyph's animated lips. State sheet should spec amplitude→mouth mapping alongside brow/eye keyframes."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-18T04:30:37.821Z",
+          "text": "Graveyard shift 2026-11-17: state-sheet production spec drafted overnight by hermes-zenbook (asus-zenbook), brief briefs/graveyard-kh1-state-sheet.md. Spec due at ~/graveyard-2026-11-17/KH-1-state-sheet-spec.md; draft only, no code touched."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-18T12:10:52.780Z",
+          "text": "Morning pack 2026-11-18: FAILED — NO SPEC PRODUCED. KH-1-state-sheet-spec.md does not exist on asus-zenbook; only the session log (filed at evidence/graveyard-2026-11-17/asus-zenbook/kh1-state-sheet.log). hermes-zenbook searched its scratch repo-review checkout, could not find evidence/zenbook-estate-review-2026-11-17.md or assets/hermes-character-concept-v4.webp there, could not confirm the Boardy theme schema, and declined to invent geometry — correct refusal, wrong-checkout input failure. Runner recorded rc=0, so the failure is invisible in runner.log. Held for Nik: re-brief with explicit verified file locations and re-run, or re-scope."
+        },
+        {
+          "author": "CLI",
+          "date": "2026-11-21T01:45:02.258Z",
+          "text": "RE-RUN DELIVERED 2026-11-20 (overnight queue): hermes-zenbook produced the production state-sheet spec from the canonical checkout ~/dev/kin-hermes (all inputs at verified absolute paths). Spec + report + log filed at evidence/kh1-rerun-2026-11-20/; summary in evidence/MORNING-PACK-2026-11-20.md. All 7 states in the locked face grammar, numeric geometry + motion timings — labelled PROPOSED values (references lock style, not coordinates); Nik's review is the approval gate. Persistent session: kin-hermes-zenbook (local-ba856c4b)."
+        }
+      ]
+    }
+  }
+}
