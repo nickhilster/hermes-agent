@@ -1,0 +1,267 @@
+Query: # Brief KH-12 (v2) — Phase 0 KinOS-posture config diff, PREP ONLY
+## For: hermes-dell, on dell-nik. Directed by Nik through Muse, 2026-11-20.
+
+HARD BOUND: this is a drafting run. Apply NOTHING. Do not edit any
+config file, do not restart the gateway or any service, do not change
+any setting. Your only writes are the two deliverables below. (Your
+2026-11-17 prep run respected this bound and its KEEP-all draft was
+honest; the reason for this re-run is that the project docs were not
+reachable to you then. They are now — see Inputs.)
+
+## Inputs — verified present at these exact absolute paths on this machine
+
+The canonical project checkout on this machine is
+`/home/nikhil/dev/kin-hermes` (a clone of the project repo
+nickhilster/hermes-agent). Read these files at these paths — do not
+search other checkouts (in particular, the fork clone at
+~/dev/hermes-agent is a different repo and has no docs/):
+
+1. `/home/nikhil/dev/kin-hermes/docs/00-charter.md` — the project
+   charter, including the adults-only hard rule.
+2. `/home/nikhil/dev/kin-hermes/docs/06-the-experiment.md` — the
+   locked experiment plan (Plan v0.2); Phase 0 is its KinOS-posture
+   setup stage.
+3. `/home/nikhil/dev/kin-hermes/docs/08-kinos-mode.md` — KinOS Mode:
+   the posture Phase 0 configures toward.
+4. 
+`/home/nikhil/dev/kin-hermes/evidence/graveyard-2026-11-17/dell-nik/KH-12-phase0
+-diff.md`
+   — your own 2026-11-17 draft: the current-values inventory and the
+   KEEP-all assessment this re-run supersedes.
+5. Your live config, read-only: `/home/nikhil/.hermes/config.yaml`.
+
+If any input is missing or unreadable at its path, STOP: write the
+failure report (below) naming exactly what is missing. Do not
+improvise from memory of the earlier draft.
+
+## Task
+
+Produce a usable proposed Phase 0 diff — a decision-ready document,
+not an inventory:
+
+For every config key the charter / experiment / KinOS-mode docs bear
+on (memory budgets and posture, approval policy, STT, gateway access,
+tool authority, anything else the docs implicate):
+
+- the key's exact name and its CURRENT value, observed by you from
+  the live config in this run (quote the source line);
+- the PROPOSED value, or KEEP with a reason;
+- the rationale, tied to a named section of docs 00 / 06 / 08;
+- the risk or behaviour change if applied, stated plainly;
+- what evidence the experiment gains or loses either way.
+
+Where the docs do not determine a value, say so and name the decision
+Nik owes — do not fill the gap with a default.
+
+Close with: (a) the exact list of changes you would make if Nik
+approved, in application order; (b) the verification steps to run
+after application (including how to prove the gateway and memory
+behave as intended); (c) the rollback for each change.
+
+## Deliverables — both required, on this machine
+
+- `/home/nikhil/kin-hermes-work/kh12/KH-12-phase0-diff-v2.md` — the diff.
+- `/home/nikhil/kin-hermes-work/kh12/KH-12-REPORT.md` — the report:
+  what you read (with paths), confirmation that nothing was applied
+  and nothing restarted, every claim labelled observed / tested /
+  inferred / not checked. The report is required on failure too.
+  A run that produces no report is a failed run, whatever its exit
+  code says.
+
+End your final message with a 5-line summary.
+
+Session local-a345fe77bdfdcf3ca8de36b682529b3d5b8760d2ad468d02bd874203851b9736 
+found but has no messages. Starting fresh.
+
+────────────────────────────────────────
+I’ll load the relevant Hermes workflow guidance, then read only the five specified
+ inputs. I’ll draft the two deliverables and verify them; I will not touch configuration
+ or services.
+∴ Thought for 2s
+────────────────────────────────────────
+
+📚 Skill hermes-agent
+
+────────────────────────────────────────
+I’m checking each required path explicitly before drafting. If any input fails to
+ read, I’ll stop the analysis and produce only the required failure report plus an
+ explicit note that the diff could not be responsibly prepared.
+∴ Thought for 5s
+────────────────────────────────────────
+
+📖 Read 00-charter.md  0.4s
+📖 Read 06-the-experiment.md  0.4s
+📖 Read 08-kinos-mode.md  0.3s
+📖 Read KH-12-phase0-diff.md  0.3s
+📖 Read config.yaml  0.4s
+
+────────────────────────────────────────
+All five specified inputs are readable. I’m extracting the remainder of the live config
+ where gateway/STT-related settings may continue, then I’ll write the decision document
+ with quoted source lines and clearly mark unresolved policy choices rather than invent
+ing them.
+∴ Thought for 2s
+────────────────────────────────────────
+
+📖 Read config.yaml L1800-2599
+
+────────────────────────────────────────
+I found an important constraint: the live config has many applicable settings, but
+ the three project documents do not specify exact target values for all of them. I
+’ll produce a complete KEEP/decision-needed diff, citing the named sections and observed
+ config source lines, with application sequence and rollback explicitly empty unless
+ Nik decides a value.
+∴ Thought for 87s
+────────────────────────────────────────
+
+✍️ Write /home/nikhil/kin-hermes-work/kh12/KH-12-phase0-diff-v2.md  0.1s
+│ kin-hermes-work/kh12/KH-12-phase0-diff-v2.md
+│ @@ -0,0 +1,97 @@
+│ +# KH-12 Phase 0 KinOS-posture config diff v2 — PREP ONLY
+│ +
+│ +Date of inspection: 2026-11-21 (local machine date not independently timezone-checked)
+│ +Target label: hermes-dell / dell-nik (supplied in brief; host identity not independently verified)
+│ +Status: Draft decision record. Nothing applied.
+│ +
+│ +## Decision summary
+│ +
+│ +The documents clearly require technical blocking of consequential authority and verification of the blocks, adult-only posture, voice-first/dictation attention, and memory posture appropriate to the experiment. They do not define a complete set of exact config values or identify supported approval-gate keys for every tool. The live config visibly records several relevant safeguards and prior operator-raised memory limits. Recommendation: KEEP those observed values; do not claim this is a proven safe configuration. Resolve the explicit decisions below before any application. The deliberate absence of a speculative config edit is the usable result of this prep pass.
+│ +
+│ +Values below are observations from `/home/nikhil/.hermes/config.yaml` read in this run. Quoted source lines include line numbers. A YAML null/empty setting is rendered as such. “KEEP” means no proposed change, not that runtime behavior has been tested.
+│ +
+│ +## Decision-ready key review
+│ +
+│ +### Memory, continuity, and experiment integrity
+│ +
+│ +| Key | Current value and source line | Proposal | Rationale (document section) | Risk / behavior change if applied | Evidence gained/lost |
+│ +|---|---|---|---|---|---|
+│ +| `memory.memory_char_limit` | `220000` — config line 991: `memory_char_limit: 220000 # KinOS run 2026-11-18: operator-raised from the 2,200 default, kept deliberately` | KEEP 220000 | 06, “Baseline probe”: 2,200-character budget failed against ~20k store; write passed only after Nik raised budgets ×10 and restarted. 06, “Ground rules” #5 requires evidence over impressions. | Lowering may reproduce native write failure; raising further changes memory capacity and context exposure. | KEEP retains the post-probe memory budget as evidence. A separate authorized test could establish whether writes/recall work now; no such test performed here. Changing it would confound the baseline. |
+│ +| `memory.user_char_limit` | `137500` — line 992: `user_char_limit: 137500   # KinOS run 2026-11-18: operator-raised from the 1,375 default, kept deliberately` | KEEP 137500 | 06, “Baseline probe” documents ×10 budget increase; 08, “Automatic, not coder” says automatic behavior must remain accountable in records. | Lowering may truncate user profile; raising increases injected profile context. | Preserve current lived-in posture. No profile write/recall behavior tested. |
+│ +| `memory.memory_enabled` | `true` — line 981: `memory_enabled: true` | KEEP true | 06, “Design” assigns dell-nik a lived-in instance with real history; “Baseline probe” records memory write/recall as measured outcomes. | Disabling would remove memory behavior from the test; enabling does not itself prove writes work. | Keeping enabled preserves the memory evidence surface; runtime operation remains untested. |
+│ +| `memory.user_profile_enabled` | `false` — line 984: `user_profile_enabled: false` | KEEP false pending Nik decision | 06, “Design” requires lived-in instance, but does not specify whether the distinct USER profile store should be enabled. 08, “Local-first” describes custody, not this toggle. | Enabling changes injected context and potentially behavior; disabling may omit profile-based personalization. | KEEP avoids changing baseline. Nik must decide whether Phase 0 explicitly includes user-profile memory. |
+│ +| `memory.nudge_interval` | `10` — line 996: `nudge_interval: 10` | KEEP 10 | 06, “Baseline probe” and “Ground rules” #5; no document gives another interval. | Changing alters frequency of memory-save prompts and can affect tested behavior. | KEEP preserves present nudge cadence; no nudge event tested. |
+│ +| `compression.enabled` | `true` — line 640: `enabled: true` | KEEP true; decision needed only if Phase 0 intends to test long-session fidelity | 06, “Ground rules” #5 and #6; 08, “automatic in the moment, accountable in the record.” Neither mandates disabling summarization. | Disabling can hit context limits; enabling can summarize history and lose detail. | KEEP preserves current behavior; whether compression preserves KinOS-relevant receipts is not tested. |
+│ +| `compression.checkpoint_required` | `false` — line 655: `checkpoint_required: false` | KEEP false unless Nik selects checkpoint-capable memory provider as an experiment requirement | 06, “Baseline probe” and 08, “Local-first” emphasize memory and local custody; neither names checkpoint provider/config. | Setting true without a compatible provider may block compaction; leaving false does not guarantee durable checkpointing. | No checkpoint behavior tested; changing without provider evidence risks losing task continuity. |
+│ +| Historical session/memory stores | Not a single config key; config line 1022 comment identifies `~/.hermes/state.db` as session storage. | No deletion, pruning, migration, or reset. | 06, “Design” (lived-in instance) and “Ground rules” #6 (no mid-course changes); 08, “Local-first.” | Any cleanup could irreversibly remove experiment history. | Preserve baseline and provenance. Actual data contents were not opened. |
+│ +
+│ +### Approval policy and tool authority
+│ +
+│ +| Key | Current value and source line | Proposal | Rationale | Risk / behavior change if applied | Evidence gained/lost |
+│ +|---|---|---|---|---|---|
+│ +| `command_allowlist` | `[]` — line 2492: `command_allowlist: []  # KinOS run 2026-11-18: pre-approvals removed; consequential command types return to the approval gate` | KEEP [] | 06, “Ground rules” #4: authority must be technically blocked, not instruction-only, and blocks verified. 08, “Safety is part of the feature,” destructive/irreversible actions require explicit human approval. | Adding entries could pre-authorize consequential commands; removing existing entries is not proposed because none are present. | Empty allowlist is observed evidence of no configured command pre-approvals, but does not prove every consequential path is gated. Must test with sacrificial targets only after approval. |
+│ +| `security.approval.*` | No active `security` block found. Commented template lines 569–577: `# security:`, `#   approval:`, `#     transport: builtin`, `#     transport_fallback: deny`, `#   protected_instruction_files: true`. | Do not add guessed values. Nik must choose the supported approval transport/mode and define which operations must gate; verify actual effective policy first. | 06, “Ground rules” #4; 08, “Safety is part of the feature.” Docs state requirement, not exact Hermes key/value contract. | Guessing a key or mode may be ignored, rejected, or leave authority unblocked. | No safety claim from the config alone. Explicitly testing blocked delete/send/spend paths would produce the required evidence; none tested. |
+│ +| `plugins.entries.muse-harness.settings.approval_mode` | `denyUnmatched` — lines 77–79: `muse-harness:` / `settings:` / `approval_mode: denyUnmatched` | KEEP denyUnmatched | 06, “Ground rules” #4; 08, “Safety is part of the feature.” | Relaxing may permit unmatched harness actions; tightening may block planned harness operations. | KEEP retains a visible restrictive plugin setting. It is not proof of global tool approval behavior. |
+│ +| `agent.disabled_toolsets` | List — lines 1323–1334: `bot_room, catalog, context_engine, desktop_ui, discord, discord_admin, feishu_doc, feishu_drive, onboarding, project, stt`. | KEEP pending explicit task-surface decision. **STT conflict:** `stt` is disabled here while `stt.enabled` is true below; Nik must decide whether Phase 0 requires Hermes STT tool availability, versus only platform voice-message transcription. | 06, “Ground rules” #3 defines tool surface as Muse’s except Google Workspace; 08, “Whisper / dictation” calls dictation primary and asks for spoken proof. Neither maps that intent to this exact disabled-toolset list. | Removing `stt` from disabled list may expose a tool; keeping it may prevent the intended dictation workflow. | Do not claim voice readiness from `stt.enabled`; test actual intended voice path after decision. |
+│ +| `platform_toolsets.cli` | Explicit list — lines 1440–1463: `a2a, browser, clarify, code_execution, computer_use, connections, cronjob, delegation, file, image_gen, kanban, memory, session_search, skills, terminal, todo, tts, video, video_gen, vision, web, x_search, muse_harness`. | Decision required: specify the exact “Muse’s” tool surface and excluded Google Workspace tools; no conversion/mutation proposed until set is enumerated. | 06, “Ground rules” #3–4. | Narrowing can prevent tasks; broad access can allow unapproved actions and data access. | A verified allowlist/denial test would establish technical scope. Current list alone does not prove effective tools or block behavior. |
+│ +| `platform_toolsets.telegram` and other messaging presets | Lines 1464–1472: each platform has its `hermes-<platform>` preset plus `muse_harness`. | Decision required whether the experiment includes any gateway platform; preserve current values meanwhile. | 06, “Ground rules” #1–3 and 08, “The Ready Surface.” | If a live messaging interface is included, those presets may expose terminal/file/send capabilities; changing them alters the tool surface. | No live adapter/tool availability was checked; no send/approval path tested. |
+│ +| `mcp_servers.*.enabled` | Notable explicit states: `notion.enabled: true` line 2424; `vercel.enabled: true` line 2444; `extendlm`, `calendly`, `canva`, `figma`, `stripe`, `linear`, `dropbox`, `klaviyo`, `todoist`, `ryfine-remote-e2e` set false at lines 2420, 2428, 2436, 2440, 2448, 2452, 2457, 2466, 2475, 2483 respectively; local servers without `enabled` field are present. | KEEP all; Nik must decide whether the test tool surface requires disabling any currently enabled integration, especially external data/action services. | 06, “Ground rules” #3–4; 08, “Local-first” and “Safety is part of the feature.” No doc provides an MCP allowlist. | Disabling can remove needed evidence/task capability; enabling or retaining an integration may expose external data/actions. No MCP connections or tools were exercised. |
+│ +| `agent.max_turns` | `90` — line 1154 | KEEP 90 pending battery protocol | 06, “Ground rules” #5–6; no target limit stated. | Lower cap may truncate tasks; higher cap permits longer autonomous runs. | Preserve comparability; runtime limit behavior not tested. |
+│ +
+│ +### Voice and STT
+│ +
+│ +| Key | Current value and source line | Proposal | Rationale | Risk / behavior change if applied | Evidence gained/lost |
+│ +|---|---|---|---|---|---|
+│ +| `stt.enabled` | `true` — line 1701 | KEEP true, but resolve disabled-toolset conflict above | 08, “Whisper / dictation” says dictation is primary input and records dell-nik as configured but runtime import/end-to-end unconfirmed. | Disabling blocks transcription; enabling alone may not make the tool available or engine functional. | A spoken end-to-end test after approval would establish runtime usability; not run here. |
+│ +| `stt.provider` | No active value; commented suggestion line 1702: `# provider: "local" # auto-detected if omitted` | Do not set provider until Nik decides privacy/cost/latency target and runtime readiness is confirmed. | 08, “Whisper / dictation” describes local/cloud provider choices and open runtime verification, not a mandated choice. | Explicit local/cloud selection changes data destination, availability, latency and cost. | No effective provider resolved and no audio sent. Choosing local could support local-first but is an inference, not a directive. |
+│ +| `stt.local.model` | `base` — line 1735 | KEEP base pending spoken benchmark | 08, “Whisper / dictation” reports `base` configured; engine presence was reported, end-to-end import open. | Model change alters accuracy, latency, resource use. | Keep the documented starting point; no transcription test performed. |
+│ +| `stt.language` | `en` — line 1745 | KEEP en unless Nik wants multilingual/auto-detect test | 08, “Whisper / dictation” does not specify language. | Empty/other language changes recognition behavior. | No language benchmark performed; decision remains open if experiment includes non-English speech. |
+│ +| `voice.voice_chat_mode` | `chained` — line 2536 | KEEP chained pending intended interaction protocol | 08, “What KinOS Mode is” specifies voice-first dictation, not a specific chat mode. | Mode changes turn-taking and voice interaction. | No voice conversation tested. |
+│ +
+│ +### Gateway access, identity, and audit
+│ +
+│ +| Key | Current value and source line | Proposal | Rationale | Risk / behavior change if applied | Evidence gained/lost |
+│ +|---|---|---|---|---|---|
+│ +| `gateway.allow_all_users` | `false` — line 1345 | KEEP false | 06, “Ground rules” #1 says Hermes receives input from Nik only; 08, “human in control.” | Setting true broadens who can invoke the agent. | Observed config supports a restrictive posture, but actual allowlists/authentication were not queried. |
+│ +| `gateway.multiplex_profiles` | `true` — line 1356 | KEEP pending gateway topology review | 06, “Design” assigns distinct fleet instances; 08, “Local-first.” | Disabling may alter routing; enabling multiplexing may create cross-profile routing considerations. | No live routes/process/profile checked. |
+│ +| `gateway.profile_routes` | `[]` — line 1358 | KEEP [] | Same as above. | Adding routes can direct messages to another profile and change data/session boundaries. | No routing behavior tested. |
+│ +| `gateway.bot_loop_guard.enabled` | `true` — line 1347 | KEEP true | 06, “Ground rules” #4 and 08, “Safety is part of the feature.” | Disabling can permit bot loops; threshold changes affect messaging. | Config shows guard enabled; no loop behavior tested. |
+│ +| `gateway.delivery_ledger` | `true` — line 1339 | KEEP true | 08, “automatic in the moment, accountable in the record”; 06, “Evidence over impressions.” | Disabling may reduce delivery traceability. | Config flag observed; ledger contents/operation not checked. |
+│ +| `gateway.strict` | `false` — line 1372 | Decision required: determine intended strictness semantics and whether enabling is compatible with current adapters. | 06, “Ground rules” #4 and 08, safety doctrine; no value prescribed. | Strictness may reject or alter adapter behavior; do not infer semantics from key name. | No gateway config/runtime validation performed. |
+│ +| `streaming.enabled` (gateway) | `false` — line 1120 | KEEP false pending message-surface choice | 06, “Evidence over impressions”; 08, “accountable in the record.” No streaming requirement specified for Phase 0. | Enabling may expose partial text and change delivery timing; disabling can reduce mid-run feedback. | No gateway message behavior tested. |
+│ +| `display.cleanup_progress` | `false` — line 1949 | KEEP false | 08, “automatic in the moment, accountable in the record”; retaining progress may aid inspection. | Enabling can delete visible progress/status bubbles after successful turns. | KEEP preserves visible breadcrumbs; no gateway UI checked. |
+│ +| `display.busy_input_mode` | `interrupt` — line 1996 | KEEP interrupt unless Nik wants queue/steer as an experiment condition | 06, “No mid-course changes”; 08, “human enters and exits the mode.” | Changing affects how operator intervention interacts with active work. | No concurrent-turn behavior tested. |
+│ +| `platforms.a2a.enabled` | `true` — line 2528; `a2a_agents.muse.url: http://127.0.0.1:9910` line 2533 | Decision required whether A2A/Muse connection is permitted by “Nik only” input rule; do not change without mapping the test protocol and checking actual peer identity. | 06, “Ground rules” #1 says Hermes receives input from Nik only; a configured peer could be a separate input path. | Disabling could remove intended harness integration; retaining may permit non-Nik input depending on runtime flow. | Config observed; live peer identity/traffic not checked. |
+│ +| Audit/history and secrets | Config line 1833 says session logging is always enabled; credentials are outside scope. | KEEP logging; do not inspect secrets. Nik must decide retention/privacy conditions for experiment artifacts. | 06, “Evidence over impressions”; 08, local-first and receipts. | Disabling/source edits alter traceability; reading or copying secrets creates unnecessary exposure. | Config comment observed; actual log output/retention not inspected. |
+│ +
+│ +### Adults-only hard rule
+│ +
+│ +The charter states in `00-charter.md`, “Hard rule: adults only” (§45–59): no kids, kids mode, kid training, teen tier, or parental-consent path. No explicit age-mode key was found or altered in this config review. This is a product/experiment constraint, not evidence of a current runtime age gate. Nik must decide whether Phase 0 requires a technical account/user admission control; none is specified in these inputs. Do not claim adults-only enforcement from this config.
+│ +
+│ +## Decisions Nik owes before any application
+│ +
+│ +1. Exact supported approval configuration and required gates for delete, send, spend, shell/OS changes, and external services; also how each gate will be tested safely.
+│ +2. Exact experiment tool allowlist matching 06 §“Ground rules” #3, including Google Workspace exclusion and status of A2A/Muse, MCP, and messaging interfaces.
+│ +3. Whether `stt` should be enabled as a toolset, which provider is acceptable, and whether speech testing is in this Phase 0 scope; reconcile `agent.disabled_toolsets: stt` with `stt.enabled: true`.
+│ +4. Whether `memory.user_profile_enabled` remains false, and whether compression/checkpoint behavior is an explicit experiment variable.
+│ +5. Whether a technical adults-only admission control is required in this phase; the charter forbids youth modes but does not name a config key.
+│ +6. Whether any gateway messaging surface is in scope, which users/chats are authorized, and whether A2A peer input is permitted under 06’s Nik-only rule.
+│ … omitted 19 diff line(s) across 1 additional file(s)/section(s)
+✍️ Write /home/nikhil/kin-hermes-work/kh12/KH-12-REPORT.md
+│ kin-hermes-work/kh12/KH-12-REPORT.md
+│ @@ -0,0 +1,38 @@
+│ +# KH-12 Phase 0 PREP ONLY — run report
+│ +
+│ +Inspection date: 2026-11-21. Target label dell-nik / hermes-dell is supplied by the brief; host identity was not independently verified.
+│ +
+│ +## Inputs read
+│ +
+│ +- `/home/nikhil/dev/kin-hermes/docs/00-charter.md` — readable; read all 59 lines. **Observed:** includes adults-only hard rule at §§45–59.
+│ +- `/home/nikhil/dev/kin-hermes/docs/06-the-experiment.md` — readable; read all 50 lines. **Observed:** locked Plan v0.2; Phase 0 had not started at seed time; rules include Nik-only input, Google Workspace excluded, technical authority blocks verified, evidence over impressions, no mid-course changes; baseline memory write failed at 2,200 chars and deletion ran without confirmation.
+│ +- `/home/nikhil/dev/kin-hermes/docs/08-kinos-mode.md` — readable; read all 165 lines. **Observed:** includes safety/approval principles, local-first posture, voice/dictation tracking, and open runtime verification for dell-nik STT.
+│ +- `/home/nikhil/dev/kin-hermes/evidence/graveyard-2026-11-17/dell-nik/KH-12-phase0-diff.md` — readable; read all 70 lines. **Observed:** earlier draft was KEEP-all and explicitly caveated missing docs; this run supersedes its conclusions where new docs now provide evidence.
+│ +- `/home/nikhil/.hermes/config.yaml` — readable; read lines 1–1799 and 1800–2566 (all 2,566 lines). **Observed:** relevant values and quoted line references are in the v2 diff.
+│ +
+│ +## Deliverables
+│ +
+│ +- `/home/nikhil/kin-hermes-work/kh12/KH-12-phase0-diff-v2.md`
+│ +- `/home/nikhil/kin-hermes-work/kh12/KH-12-REPORT.md`
+│ +
+│ +**Tested:** Both deliverables were written successfully by the file-writing tool; the tool confirmed on-disk verification for each. Markdown lint was not run (no configured linter reported). No config parser or runtime checks were run because this was PREP ONLY.
+│ +
+│ +## Activity and boundaries
+│ +
+│ +**Observed:** No config file was edited. No setting was changed. No gateway or service was restarted. No live gateway, approval prompt, memory write, STT transcription, tool denial, messaging delivery, or external connector was exercised. No credentials/secrets were inspected.
+│ +
+│ +**Observed:** All five paths were readable, so the missing-input stop condition did not trigger.
+│ +
+│ +**Inferred:** Documents specify safety posture and experiment constraints, but do not give exact values for several live config keys (notably global approval configuration, exact tool allowlist, STT provider, adults-only admission control, and gateway/A2A participation). Therefore the diff recommends no config changes and records decisions Nik owes rather than guessing.
+│ +
+│ +**Not checked:** Host identity; active profile/process identity; effective runtime config and environment overrides; live gateway access lists; provider/runtime approval behavior; actual memory file sizes/contents; STT runtime import and end-to-end dictation; MCP/A2A connectivity; config parse validity; any post-application behavior.
+│ +
+│ +## Receipt
+│ +
+│ +**Outcome:** Read the requested sources and created a decision-ready, source-line-cited KEEP/decision-needed draft plus this report.
+│ +
+│ +**Verification:** Both artifact writes returned `verified: true`.
+│ +
+│ +**Not done:** No config edits, service restarts, gateway actions, or runtime tests.
+│ +
+│ +**Open items:** Nik must resolve the decisions listed in the diff before any later application; this draft itself authorizes no changes.
+📖 Read KH-12-phase0-diff-v2.md
+📖 Read KH-12-REPORT.md
+
+────────────────────────────────────────
+☤ Hermes
+Completed the PREP-only run. All five specified inputs were readable. The decision-ready diff recommends no config changes where the documents don’t establish exact values, and lists the decisions Nik owes. Both deliverables were written and verified.
+
+Observed: no config changed and no gateway or service restarted. Runtime behavior was not tested.
+
+Diff: /home/nikhil/kin-hermes-work/kh12/KH-12-phase0-diff-v2.md
+Report: /home/nikhil/kin-hermes-work/kh12/KH-12-REPORT.md
+
+PREP ONLY — nothing applied.
+Inputs: all five specified paths read.
+Diff: decision-ready; unresolved choices identified, no guessed values.
+Report: written and verified at the listed path.
+Not done: no settings changed, services restarted, or runtime tests performed.
+────────────────────────────────────────
+
+Resume this session with:
+  hermes --resume local-a345fe77bdfdcf3ca8de36b682529b3d5b8760d2ad468d02bd874203851b9736
+  hermes -c "kin-hermes-dell"
+
+Session:        local-a345fe77bdfdcf3ca8de36b682529b3d5b8760d2ad468d02bd874203851b9736
+Title:          kin-hermes-dell
+Duration:       2m 10s
+Messages:       19 (1 user, 17 tool calls)
+rc=0
