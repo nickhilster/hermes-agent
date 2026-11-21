@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "name": "Boardy",
+  "author": "Boardy at the Desk",
+  "version": "1.0.0",
+  "description": "Boardy, the cardboard-box-headed office mascot, brought to life as a desk pet.",
+  "viewBox": { "x": -10, "y": -4, "width": 52, "height": 48 },
+  "layout": {
+    "contentBox": { "x": -6, "y": -2, "width": 38, "height": 36 },
+    "marginBox": { "x": -10, "y": -4, "width": 46, "height": 44 },
+    "centerX": 12,
+    "baselineY": 39,
+    "visibleHeightRatio": 0.62,
+    "baselineBottomRatio": 0.05
+  },
+  "eyeTracking": {
+    "enabled": true,
+    "states": ["idle", "dozing", "mini-idle"],
+    "eyeRatioX": 0.5,
+    "eyeRatioY": 0.5,
+    "maxOffset": 2.5,
+    "bodyScale": 0.28,
+    "shadowStretch": 0.15,
+    "shadowShift": 0.3,
+    "ids": { "eyes": "eyes-js", "body": "body-js", "shadow": "shadow-js" },
+    "shadowOrigin": "12px 39px"
+  },
+  "sleepSequence": { "mode": "full" },
+  "states": {
+    "idle": ["boardy-idle.svg"],
+    "thinking": ["boardy-thinking.svg"],
+    "working": ["boardy-working.svg"],
+    "juggling": ["boardy-juggling.svg"],
+    "attention": ["boardy-attention.svg"],
+    "error": ["boardy-error.svg"],
+    "notification": ["boardy-notification.svg"],
+    "sleeping": ["boardy-sleeping.svg"],
+    "yawning": ["boardy-yawning.svg"],
+    "dozing": ["boardy-dozing.svg"],
+    "collapsing": ["boardy-collapsing.svg"],
+    "waking": ["boardy-waking.svg"],
+    "sweeping": ["boardy-sweeping.svg"],
+    "carrying": ["boardy-carrying.svg"]
+  },
+  "workingTiers": [
+    { "minSessions": 3, "file": "boardy-building.svg" },
+    { "minSessions": 2, "file": "boardy-groove.svg" },
+    { "minSessions": 1, "file": "boardy-working.svg" }
+  ],
+  "jugglingTiers": [
+    { "minSessions": 2, "file": "boardy-dizzy.svg" },
+    { "minSessions": 1, "file": "boardy-groove.svg" }
+  ],
+  "wideHitboxFiles": ["boardy-error.svg", "boardy-notification.svg"],
+  "sleepingHitboxFiles": ["boardy-sleeping.svg", "boardy-collapsing.svg"],
+  "hitBoxes": {
+    "default": { "x": -8, "y": -2, "w": 42, "h": 40 },
+    "wide": { "x": -10, "y": -4, "w": 46, "h": 44 },
+    "sleeping": { "x": -8, "y": 2, "w": 42, "h": 32 }
+  },
+  "idleAnimations": [
+    { "file": "boardy-idle-look.svg", "duration": 6500 },
+    { "file": "boardy-idle-daydream.svg", "duration": 9000 }
+  ],
+  "reactions": {
+    "drag": { "file": "boardy-react-drag.svg" },
+    "clickLeft": { "file": "boardy-react-left.svg", "duration": 2500 },
+    "clickRight": { "file": "boardy-react-right.svg", "duration": 2500 },
+    "annoyed": { "file": "boardy-react-annoyed.svg", "duration": 3500 },
+    "double": { "files": ["boardy-react-double.svg"], "duration": 3500 }
+  },
+  "miniMode": {
+    "supported": true,
+    "offsetRatio": 0.5,
+    "viewBox": { "x": -4, "y": -2, "width": 32, "height": 32 },
+    "states": {
+      "mini-idle": ["boardy-mini-idle.svg"],
+      "mini-enter": ["boardy-mini-enter.svg"],
+      "mini-peek": ["boardy-mini-peek.svg"],
+      "mini-alert": ["boardy-mini-alert.svg"],
+      "mini-happy": ["boardy-mini-happy.svg"],
+      "mini-sleep": ["boardy-mini-sleep.svg"],
+      "mini-enter-sleep": ["boardy-mini-enter-sleep.svg"],
+      "mini-crabwalk": ["boardy-mini-hop.svg"],
+      "mini-working": ["boardy-mini-working.svg"]
+    }
+  },
+  "sounds": { "complete": "complete.mp3", "confirm": "confirm.mp3" },
+  "objectScale": {
+    "widthRatio": 1.7,
+    "heightRatio": 1.2,
+    "offsetX": -0.35,
+    "offsetY": -0.2
+  },
+  "timings": {
+    "minDisplay": {
+      "attention": 4000,
+      "error": 5000,
+      "sweeping": 5500,
+      "notification": 5000,
+      "carrying": 3600
+    },
+    "autoReturn": {
+      "attention": 4000,
+      "error": 5000,
+      "sweeping": 300000,
+      "notification": 5000,
+      "carrying": 3600
+    },
+    "mouseIdleTimeout": 20000,
+    "mouseSleepTimeout": 60000
+  }
+}

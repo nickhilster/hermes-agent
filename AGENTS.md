@@ -39,3 +39,15 @@ project's *intent*. Read `README.md` first, then the `docs/` in numbered order.
 - Isolated dev home for fork builds: `HERMES_HOME=~/hermes-dev-data` on dell-nik
   (repo commands need `source ./activate` — Node 26 / pinned pnpm)
 - Live installs are never build targets and never get overwritten by test builds.
+
+## Canonical checkouts (standing fix, 2026-11-20)
+
+- **This project repo:** `~/dev/kin-hermes` on every machine
+  (dell-nik, asus-zenbook, legion-win). Briefs must name this absolute
+  path and the exact files inside it; a brief that points at "the
+  project repo" without the path is defective. (Root cause of the
+  KH-1 / KH-12 failures on 2026-11-17: no canonical checkout existed,
+  so instances searched scratch and fork clones and rightly refused
+  to improvise.)
+- The fork code clone stays at dell-nik `~/dev/hermes-agent` — a
+  different repo from this one; never substitute it for this repo.
